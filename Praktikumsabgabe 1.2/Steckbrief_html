@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf8">
+    <title>Meine Website</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="Über mich"></h1>
+            <img src="MeinBild.jpg">
+            <p>Erstmal, wer bin ich? Ich bin jemand der ständig an sich arbeitet und noch seinen Weg sucht.Ach übrigens meine Name ist Larissa.</p>
+        
+        <h1>Meine Hochschule</h1>
+            <img src="HFU_Logo.png">
+            <p>Die <a href="https://www.hs-furtwangen.de/">Hochschule Furtwangen</a>, auch HFU genannt bietet verschiendene
+                Studiengänge an.Von AGW, Informatik, Wirtschaftsingenuierwesen bis hin zu OnlineMedien. Alles ist
+                dabei!!! Ich selber studiere OnlineMedien, ein Sudiengang der zu empfehlen ist.</p>
+       
+        <h2>Meine Hobbies</h2>
+            <ul>
+                <li> href="#">Tanzen</li>
+                <li>Gitarre spielen</li>
+                <li>Lesen</li>
+                <li>Schwimmen</li>
+                <li>Kochen</li>
+                <li>Yoga</li>
+            </ul>
+
+    </header>
+
+    <main>
+
+    </main>
+
+
+<footer>
+    Diese Seite wurde von Larissa Osmanovic erstellt.
+</footer>
+</body>
+
+</html>
