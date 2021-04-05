@@ -9,9 +9,32 @@
 
 <body>
     <h1 id="Meine Kontaktdaten">Meine Kondaktdaten</h1>
-    <p>Mich kann man auf verschiedene Art und Weisen erreichen. Einmal per,...E-Mail:larissa.osmanovic@hs-furtwangen.de </p>
-    
+    <p>Mich kann man auf verschiedene <b>Art und Weise</b> erreichen.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Kontaktmöglichkeiten</th>
+                <th>Meine Daten</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>E-Mail</td>
+                <td>larissa.osmanovic@hs-furtwangen.de</td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td>larissa_6091</td>
+            </tr>
+            <tr>
+                <td>Handynummer</td>
+                <td>0176 6325775</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Um zum Portfolio zurückzukehren,<i>klicke den Link below.</i></p>
+    <a href="#Portfolio">Portfolio</a>
 </body>
 
-</html>
 </html>
