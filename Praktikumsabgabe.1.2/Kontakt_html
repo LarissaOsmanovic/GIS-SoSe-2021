@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="utf8">
-    <title>....</title>
+    <title>Kontakt</title>
 </head>
 
 <body>
-    <h1>"Meine Kontaktdaten"</h1>
-    <p>E-Mail:  </p>
+    <h1 id="Meine Kontaktdaten">Meine Kondaktdaten</h1>
+    <p>Mich kann man auf verschiedene Art und Weisen erreichen. Einmal per,...E-Mail:larissa.osmanovic@hs-furtwangen.de </p>
     
 </body>
 
