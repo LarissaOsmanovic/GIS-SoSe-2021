@@ -1,0 +1,21 @@
+h1 {
+    color: black;
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: large;
+    font-weight: 500;  
+    text-align: center;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-transform: capitalize;
+
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
