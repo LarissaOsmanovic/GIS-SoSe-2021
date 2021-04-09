@@ -1,3 +1,8 @@
+.aside-headline {
+    color: white;
+    background-color: lightblue;
+}
+
 nav {
     color: white;
     background-color: black;
@@ -20,6 +25,8 @@ h1 {
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    text-transform: capitalize;
+    color:cornflowerblue;
 
 }
 
@@ -33,17 +40,17 @@ h3 {
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
-}
-
-a {
-
+    text-align: center;
 }
 
 table {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
 ul {
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
