@@ -5,7 +5,7 @@
     width: 400px;
 
     padding: 10px 10px 50px 10px;
-    border: 5px solid cornflowerblue;
+    border: 5px solid  rgb(88, 145, 88);
     margin: 10px 10px 50px 10px;
 }
 .myDiv2 {
@@ -14,14 +14,14 @@
 
     width: 40px;
 
-    padding: 10px 10px 20px 10px;
+    padding: 30px 30px 40px 30px;
     border: 5px solid black;
-    margin: 10px 10px 20px 10px;
+    margin: 30px 30px 40px 30px;
 }
 
 .aside-headline {
     color: white;
-    background-color: cornflowerblue;
+    background-color:  rgb(88, 145, 88);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size:xx-large;
@@ -35,20 +35,25 @@ nav {
     text-transform: capitalize;
     nav-right: auto;
     text-decoration: none;
-    text-align: top right;
+ 
     position: fixed;
     font-weight: 800;
-    fix
-
+    
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    background: rgb(88, 145, 88);
 
+}
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-transform: capitalize;
-    color:rgb(33, 77, 160);
+    color: rgb(88, 145, 88);
 
 }
 
@@ -56,7 +61,7 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: large;
-    color:cornflowerblue;
+    color: rgb(88, 145, 88);
     
 }
 
@@ -68,7 +73,7 @@ p {
 
 
 image, video {
-    object-position: center;
+    position: center;
 
 }
 
@@ -96,7 +101,7 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: rgb(114, 157, 236);
+    background-color:  rgb(88, 145, 88);
     color:white;
   }
 
