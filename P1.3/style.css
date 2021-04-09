@@ -8,22 +8,36 @@
     border: 5px solid cornflowerblue;
     margin: 10px 10px 50px 10px;
 }
+.myDiv2 {
+    background: black;
+    color: white;
+
+    width: 40px;
+
+    padding: 10px 10px 20px 10px;
+    border: 5px solid black;
+    margin: 10px 10px 20px 10px;
+}
 
 .aside-headline {
-    color:black;
-    background-color: lightblue;
+    color: white;
+    background-color: cornflowerblue;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-size:xx-large;
 
 }
 
-nav, a {
+nav {
     color: white;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
     nav-right: auto;
     text-decoration: none;
+    text-align: top right;
+    font-weight: 800;
+
 }
 
 
@@ -38,20 +52,41 @@ h2 {
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
     text-align: center;
+    font-size: large;
     color:cornflowerblue;
     
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: medium;
     text-align: center;
 }
 
+}
+
+image, video {
+    object-position: center;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+
+}
+
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 th, td {
     border-bottom: 1px solid #ddd;
+    text-align: left;
    
 }
 
@@ -60,18 +95,12 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: cornflowerblue;
-    color:black;
+    background-color: rgb(114, 157, 236);
+    color:white;
   }
 
 ul, li {
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
 
-}
-
-image, video {
-    object-position: center;
-
-}
 
