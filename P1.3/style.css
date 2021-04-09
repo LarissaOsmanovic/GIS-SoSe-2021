@@ -17,12 +17,13 @@
 
 }
 
-nav {
+nav, a {
     color: white;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
     nav-right: auto;
+    text-decoration: none;
 }
 
 
@@ -49,11 +50,19 @@ p {
     text-align: center;
 }
 
-table {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-
+th, td {
+    border-bottom: 1px solid #ddd;
+   
 }
+
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+th {
+    background-color: cornflowerblue;
+    color:black;
+  }
 
 ul, li {
     font-family: Arial, Helvetica, sans-serif;
