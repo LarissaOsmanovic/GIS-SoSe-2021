@@ -8,19 +8,10 @@ nav {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
-    text-align: start;
+    text-align: left;
 }
 
-h1 {
-    color: black;
-    background-color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-size: larger;
-    font-weight: bolder;  
-    text-align: center;
-    text-transform: capitalize;
-}
+
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
