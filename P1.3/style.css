@@ -36,7 +36,9 @@ nav {
     nav-right: auto;
     text-decoration: none;
     text-align: top right;
+    position: fixed;
     font-weight: 800;
+    fix
 
 }
 
@@ -64,7 +66,6 @@ p {
     text-align: center;
 }
 
-}
 
 image, video {
     object-position: center;
