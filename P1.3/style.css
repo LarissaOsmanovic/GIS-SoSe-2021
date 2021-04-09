@@ -3,7 +3,7 @@ nav {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
-    text-align: right;
+    text-align: start;
 }
 
 h1 {
@@ -19,12 +19,14 @@ h1 {
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 
 }
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+    text-align: center;
     
 }
 
@@ -45,10 +47,8 @@ ul {
 
 }
 
-image {
+image, video {
+    text-align: center;
 
 }
 
-video {
-    
-}
