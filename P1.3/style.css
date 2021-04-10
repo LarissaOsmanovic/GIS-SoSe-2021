@@ -5,12 +5,10 @@
     font-size: 100px;
     text-align: center;
     
-
-    width: 800px;
-    padding: 10px 10px 100px 10px;
-    margin: 10px 10px 100px 10px;
-    
 }
+width: 800px;
+padding: 10px 10px 100px 10px;
+margin: 10px 10px 100px 10px;
 
 .myDiv{
     color: white;
@@ -66,7 +64,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 600px;
   
 }
 
