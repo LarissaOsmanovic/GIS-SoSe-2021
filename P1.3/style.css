@@ -7,9 +7,9 @@
     
 
     width: 1000px;
-    padding: 10px 10px 50px 10px;
+    padding: 10px 10px 60px 10px;
     border: 20px solid  rgba(88, 145, 88, 0.809);
-    margin: 10px 10px 50px 10px;
+    margin: 10px 10px 60px 10px;
     
 
 }
@@ -19,11 +19,12 @@
     float: left;
     display: block;
     color: white;
-    text-align:right;
-    padding: 14px 16px;
+    background-color: black;
+    text-align: right;
+    padding: 15px 100px;
     text-decoration: none;
     font-variant: small-caps;
-    position:fixed;
+    position: fixed;
     list-style-type: none;
 }
 
