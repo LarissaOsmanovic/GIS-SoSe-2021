@@ -1,14 +1,14 @@
 .aside-headline {
     color: white;
-    background-color: rgb(88, 145, 88);
+    background-color: rgba(88, 145, 88, 0.809);
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
     text-align: center;
     
 
     width: 800px;
-    padding: 20px 20px 40px 20px;
-    border: 20px solid  rgb(88, 145, 88);
+    padding: 10px 10px 50px 10px;
+    border: 20px solid  rgba(88, 145, 88, 0.809);
     margin: 10px 10px 50px 10px;
     
 
@@ -51,12 +51,18 @@ a {
 
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
 .Bildpolaroid {
     width: 80%;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
+    box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.19), 0 6px 20px 0 rgba(8, 8, 8, 0.19);
+    margin-bottom: 30px;
 }
 
 .TextBild {
