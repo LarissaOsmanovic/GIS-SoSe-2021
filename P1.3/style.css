@@ -23,8 +23,7 @@
     border: 8px solid black;
     
 }
-
- 
+nav
     color: white; 
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,7 +36,6 @@
  
 margin: 30px 30px 40px 30px;
 width: 40px;
-
 .aside-headline {
     color: white;
     background-color:  rgb(88, 145, 88);
@@ -45,7 +43,7 @@ width: 40px;
     text-align: center;
     font-size:xx-large;
     padding: 20px;
-
+    font-weight: bold;
 }
 
 .footer {
@@ -56,11 +54,19 @@ width: 40px;
     background-color: rgb(184, 247, 184);
 }
 
+  
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    background: rgb(88, 145, 88);
+}
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: medium;
+    font-size: large;
     font-variant: small-caps;
     color: rgb(88, 145, 88);
 
