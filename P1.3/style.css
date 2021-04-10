@@ -12,12 +12,11 @@
     background: black;
     color: white;
 
-    width: 50px;
+    width: 40px;
 
-    padding: 40px 40px 50px 40px;
+    padding: 30px 30px 40px 30px;
     border: 8px solid black;
-    margin: 40px 40px 50px 40px;
-   
+    margin: 30px 30px 40px 30px;
 }
 
 .aside-headline {
