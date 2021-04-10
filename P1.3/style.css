@@ -16,6 +16,7 @@ nav{
      padding: 14px 16px;
      text-decoration: none;
      font-variant: small-caps;
+     position:fixed;
 }
 
 a {
