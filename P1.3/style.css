@@ -1,13 +1,20 @@
 .aside-headline {
-    background-color: rgb(88, 145, 88);
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background-color: rgb(88, 145, 88);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    
+
+    width: 400px;
+    padding: 20px 20px 40px 20px;
+    border: 20px solid  rgb(88, 145, 88);
+    margin: 10px 10px 50px 10px;
+    
 
 }
 
-nav{
+.myDiv{
     overflow: hidden;
     float: left;
      display: block;
@@ -17,6 +24,22 @@ nav{
      text-decoration: none;
      font-variant: small-caps;
      position:fixed;
+     list-style-type: none;
+}
+
+
+
+
+
+
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+    font-variant: small-caps;
+    color: rgb(88, 145, 88);
+
 }
 
 a {
@@ -49,4 +72,12 @@ th {
 ul, li {
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
+}
+
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    font-size: x-small;
+    padding: 10px;
+    background-color: rgb(184, 247, 184);
 }
