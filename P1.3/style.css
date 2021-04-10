@@ -52,14 +52,14 @@ a {
 }
 
 
-div.polaroid {
+.Bildpolaroid {
     width: 80%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
 }
 
-div.Text {
+.TextBild {
     text-align: center;
     padding: 10px 20px;
 }
@@ -94,5 +94,5 @@ ul, li {
     text-align: right;
     font-size: x-small;
     padding: 10px;
-    background-color: rgba(155, 202, 155, 0.945);
+    background-color:  rgba(117, 194, 117, 0.904);
 }
