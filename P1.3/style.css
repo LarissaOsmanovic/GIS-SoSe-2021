@@ -71,14 +71,18 @@ img {
 
 .Bildpolaroid {
     width: 60%;
-    background-color: white;
-    box-shadow:  4px 8px  rgba(8, 8, 8, 0.19),  6px 15px  rgba(8, 8, 8, 0.19);
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.19), 0 6px 15px 0 rgba(8, 8, 8, 0.19);
     margin-bottom: 30px;
 }
 
 .TextBild {
     text-align: center;
     padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+
 }
 
 table {
