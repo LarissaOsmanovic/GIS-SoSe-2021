@@ -8,22 +8,25 @@
 
     width: 800px;
     padding: 10px 10px 100px 10px;
-    border: 20px solid  rgba(88, 145, 88, 0.762);
+   
     margin: 10px 10px 100px 10px;
     
 
 }
 
 .myDiv{
-    overflow: hidden;
-    float: left;
-    display: block;
     color: white;
     background-color: black;
-    text-align: right;
-    padding: 15px 100px;
-    text-decoration: none;
+
+    text-align: center;
     font-variant: small-caps;
+    text-decoration: none;
+
+    padding: 8px 100px;
+   
+    overflow: hidden;
+    float: right;
+    display: block;
     position: fixed;
     list-style-type: none;
 }
