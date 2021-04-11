@@ -18,7 +18,7 @@
    
     padding: 20px;     
     text-decoration: none;     
-    /* font-size: 20px;  */
+   
 } 
 
 .myDive a:hover{ color:    rgb(88, 145, 88);}
@@ -29,28 +29,44 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100px;
     text-align: center;
-    
-/* width: 800px; */
-/* padding: 10px 10px 100px 10px;
-margin: 10px 10px 100px 10px; */
+}
+
+#index{
+    background-color: rgb(103, 171, 103);
+    font-size: small;
+}
+
+#Steckbrief{
+    background-color: rgb(103, 171, 103);
+    font-size: small;
+}
+
+#Kontakt{
+    background-color:  rgb(103, 171, 103);
+    font-size: small;
 }
       
-body {
-   
+body{
+   background-color: rgb(248, 243, 236);
     background-image: url("bg.pgn");
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    justify-content:center;
-    width: 800px; 
 
 }
 
 .container{ 
     text-align: left;
-    margin: 0 auto;
+    margin: auto;
     padding: 50px;
     margin-top: 50px;
-   
+    height: auto;
+    width: 800px;
+}
+
+.container2{ 
+    text-align: left;
+    margin: auto;
+    padding: 20px;
     width: 800px;
 }
   
@@ -60,11 +76,10 @@ h2 {
     font-size: 60px;
     font-variant: small-caps;
     color: rgb(88, 145, 88);
-    background-color: rgb(243, 234, 217);
+    background-color: rgb(245, 226, 191);
 
 }
-padding: 10px 10px 100px 10px;
-    margin: 10px 10px 100px 10px; 
+
 h3{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -108,7 +123,6 @@ img {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
-
 }
 
 table {
@@ -138,6 +152,7 @@ th {
 ul, li {
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
+    text-align: center;
 }
 
 video {
@@ -147,8 +162,30 @@ video {
 
 }
 
+form{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+}
 
+.fa.fa-instagram{
+    color: black;
+    font-size: 40px;
+}
 
+.fa.fa-twitter{
+    color: black;
+    font-size: 40px;
+}
+
+.fa.fa-snapchat{
+    color: black;
+    font-size: 40px;
+}
+
+#socialmediaicons a :hover{
+    background-color: rot,
+}
 
 .footer {
     font-family: Arial, Helvetica, sans-serif;
@@ -156,4 +193,16 @@ video {
     font-size: x-small;
     padding: 10px;
     background-color: rgba(88, 145, 88, 0.762);
+}
+
+.boxModell {
+    text-align: center;
+    background-color: rgba(88, 145, 88, 0.762);;
+    color: white;
+
+    width:700px;
+
+    padding: 15px 15px 30px 15px;
+    border: 10px solid rgb(35, 85, 35) ;
+    margin: auto;
 }
