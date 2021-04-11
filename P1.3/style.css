@@ -1,6 +1,6 @@
 .myDiv{     
     overflow: hidden;     
-    background-color: rgb(5, 5, 5);
+    background-color: black;
     position: fixed;  
     margin: 0;
     padding: 0;   
@@ -8,7 +8,7 @@
     width: 800px;      } 
 
 .myDiv a{  
-    color: rgb(88, 145, 88); 
+    color:  white; 
     font-variant: small-caps;
     text-align: center;  
     text-decoration: none;
@@ -21,7 +21,7 @@
     /* font-size: 20px;  */
 } 
 
-.myDive a:hover{     color: white;}
+.myDive a:hover{ color:    rgb(88, 145, 88);}
 
 .aside-headline {
     color: white;
@@ -37,6 +37,7 @@ margin: 10px 10px 100px 10px; */
       
 body {
     background-color: rgb(255, 247, 247);
+    background-image: url("bg.pgn");
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     justify-content:center;
@@ -145,6 +146,50 @@ video {
     margin-right: auto;
 
 }
+
+
+
+.feedback-input {
+  form { max-width:420px; margin:50px auto; }
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+.Kontakt{
+  font-family:  Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
 
 .footer {
     font-family: Arial, Helvetica, sans-serif;
