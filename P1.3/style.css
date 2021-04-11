@@ -1,6 +1,6 @@
 .myDiv{     
     overflow: hidden;     
-    background-color: black;
+    background-color: rgba(61, 108, 61, 0.762);;
     position: fixed;  
     margin: 0;
     padding: 0;   
@@ -8,7 +8,7 @@
     width: 800px;      } 
 
 .myDiv a{  
-    color:  white; 
+    color:  rgb(0, 0, 0); 
     font-variant: small-caps;
     text-align: center;  
     text-decoration: none;
@@ -21,7 +21,8 @@
    
 } 
 
-.myDive a:hover{ color:    rgb(88, 145, 88);}
+.container2 a:hover{ 
+    color:    rgb(103, 171, 103); }
 
 .aside-headline {
     color: white;
@@ -32,17 +33,17 @@
 }
 
 #index{
-    background-color: rgb(103, 171, 103);
+    background-color: white;
     font-size: small;
 }
 
 #Steckbrief{
-    background-color: rgb(103, 171, 103);
+    background-color:  white;
     font-size: small;
 }
 
 #Kontakt{
-    background-color:  rgb(103, 171, 103);
+    background-color:   white;
     font-size: small;
 }
       
@@ -179,13 +180,13 @@ form{
     font-size: 40px;
 }
 
-.fa.fa-snapchat{
+.fa.fa-snapchat {
     color: black;
     font-size: 40px;
 }
 
-#socialmediaicons a :hover{
-    background-color: rot,
+.fa:hover{
+    background-color: rgba(88, 145, 88, 0.762);
 }
 
 .footer {
