@@ -10,7 +10,7 @@
 /* padding: 10px 10px 100px 10px;
 margin: 10px 10px 100px 10px; */
 
-.navstyle{     
+.myDiv{     
     overflow: hidden;     
     background-color: black;
     position: fixed;     
@@ -20,7 +20,9 @@ margin: 10px 10px 100px 10px; */
 .myDiv a{  
     color: white;
     font-variant: small-caps;
-    text-align: center;         
+    text-align: center;  
+    text-decoration: none;
+       
     float: right;     
     display: block;     
     
@@ -35,7 +37,7 @@ margin: 10px 10px 100px 10px; */
    
    
 body {
-    background-color: rgba(251, 251, 251, 0.972);
+    background-color: rgba(250, 238, 216, 0.972);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 800px;
