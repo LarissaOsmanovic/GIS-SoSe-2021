@@ -38,17 +38,17 @@ body {
     background-color: rgb(240, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    width: 800px;
+    width: 1000px;
 
 }
 
 /* .container{ 
     text-align: left;
     margin: 0 auto;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 50px;
+    margin-top: 50px;
    
-    width: 800px;
+    width: 1000px;
 }*/
   
 h2 {
@@ -60,16 +60,13 @@ h2 {
     background-color: rgb(243, 234, 217);
 
 }
-
+padding: 10px 10px 100px 10px;
+    margin: 10px 10px 100px 10px; 
 h3{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: large;
-    color: rgb(88, 145, 88);
-
-    padding: 10px 10px 100px 10px;
-    margin: 10px 10px 100px 10px; 
-    
+    color: rgb(88, 145, 88); 
 }
 
 a {
@@ -82,7 +79,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     text-align: center;
-    display: block;
+   
 }
 
 img {
@@ -116,13 +113,16 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 60%;
+    display: block;
 }
 th, td {
     border-bottom: 1px solid #ddd;
-    text-align: left;
-   
+    text-align: left;  
 }
 
+td{
+    height: 50px;
+}
 tr:nth-child(even){
     background-color: lightgray;
 }
