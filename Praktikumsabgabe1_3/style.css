@@ -46,10 +46,14 @@
     background-color:   white;
     font-size: small;
 }
-      
+
+main{
+    background-color: rgb(255, 250, 244);
+
+}
+
 body{
-   background-color: rgb(248, 243, 236);
-    background-image: url("bg.pgn");
+    background-image: url("bg.png");
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 
@@ -109,7 +113,6 @@ img {
 }
 
 .Bildpolaroid {
-    width: 60%;
     background-color: black;
     box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.19), 0 6px 15px 0 rgba(8, 8, 8, 0.19);
     padding: 10px 15px;
@@ -161,18 +164,71 @@ video {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width:320px;
+    height:640px;
 
 }
 
 form{
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.formTitel{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(88, 145, 88); 
+    text-align: left;
+}
+
+.formstyle{
+    font-size: large;
+    text-align: left;
+    border: 0px;
+    color: black;
+    background-color: #CCCCCC;
+    padding-right: 350px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    margin-top: 0px;
+}
+
+.formbutton{
+    height: 30px;
+    width: 100px;
+    border: 0px;
+    background-color: rgba(88, 145, 88, 0.762);
+    color: white;
+    } 
+
+.footer {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: small;
+    padding: 20px;
+    background-color: rgba(88, 145, 88, 0.762);
     font-variant: small-caps;
+}
+.footer a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    color: white;
+}
+
+.SocialNavigation{
+    overflow: hidden;
+    width: auto;
+    text-align: center;
+    background-color: rgba(88, 145, 88, 0.762);
 }
 
 .fa.fa-instagram{
     color: black;
     font-size: 40px;
+    
 }
 
 .fa.fa-twitter{
@@ -187,24 +243,20 @@ form{
 
 .fa:hover{
     background-color: rgba(88, 145, 88, 0.762);
+   
 }
-
-.footer {
+/* .boxModell { 
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: right;
-    font-size: x-small;
-    padding: 10px;
-    background-color: rgba(88, 145, 88, 0.762);
-}
-
-.boxModell {
-    text-align: center;
-    background-color: rgba(88, 145, 88, 0.762);;
+    font-size: large;
+    background-color: rgba(192, 253, 192, 0.762);;
     color: white;
+
 
     width:700px;
 
     padding: 15px 15px 30px 15px;
     border: 10px solid rgb(35, 85, 35) ;
-    margin: auto;
-}
+    margin: auto; 
+ }  */
+
