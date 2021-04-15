@@ -26,7 +26,6 @@
 
 .aside-headline {
     color: white;
-    background-color: rgba(61, 108, 61, 0.762);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100px;
     text-align: center;
@@ -48,7 +47,7 @@
 }
 
 main{
-    background-color: rgb(255, 250, 244);
+    background-color: rgba(88, 145, 88, 0.762);
 
 }
 
@@ -80,8 +79,8 @@ h2 {
     text-align: center;
     font-size: 60px;
     font-variant: small-caps;
-    color: rgb(88, 145, 88);
-    background-color: rgb(245, 226, 191);
+    color: white;
+   
 
 }
 
@@ -89,7 +88,7 @@ h3{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: large;
-    color: rgb(88, 145, 88); 
+    color: white; 
 }
 
 a {
@@ -149,7 +148,7 @@ tr:nth-child(even){
 }
 
 th {
-    background-color:  rgb(103, 171, 103);
+    background-color:  lightslategray;
     color:white;
     height: 50px;
 }
@@ -176,7 +175,7 @@ form{
 .formTitel{
     font-family: Arial, Helvetica, sans-serif;
 
-    color:rgb(88, 145, 88); 
+    color:white; 
     text-align: left;
 }
 .labelForm{
@@ -208,7 +207,7 @@ form{
     height: 30px;
     width: 100px;
     border: 0px;
-    background-color: rgba(88, 145, 88, 0.762);
+    background-color: rgba(37, 65, 37, 0.762);
     color: white;
     } 
 
@@ -242,21 +241,8 @@ form{
 }
 
 .fa:hover{
-    background-color: rgba(88, 145, 88, 0.762);
+    background-color: rgba(255, 255, 255, 0.762);
    
 }
-/* .boxModell { 
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    background-color: rgba(192, 253, 192, 0.762);;
-    color: white;
 
-
-    width:700px;
-
-    padding: 15px 15px 30px 15px;
-    border: 10px solid rgb(35, 85, 35) ;
-    margin: auto; 
- }  */
 
