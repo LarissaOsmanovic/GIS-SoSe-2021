@@ -1,233 +1,135 @@
-.myDiv{     
-    overflow: hidden;     
-    background-color: rgba(61, 108, 61, 0.762);;
-    position: fixed;  
-    margin: 0;
-    padding: 0;   
-    top: 0;     
-    width: 800px;      } 
 
-.myDiv a{  
-    color:  rgb(0, 0, 0); 
-    font-variant: small-caps;
-    text-align: center;  
+/* Abstände zum Banner */
+main {
+
+    margin-top: 50px; /* Main Bereich */
+    margin-bottom: 50px;
+    margin-right: 10px; /* Smartphone zum Rand */
+    margin-left: 10px;
+}
+
+body {
+    background-color: rgba(241, 241, 241, 0.932);
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+}
+header { /* Kopfbereich */
+    background-color: rgba(241, 241, 241, 0.932);
+    height: flex;    
+    position: sticky; /* wenn fixed verschwindet es unter dem banner */
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.94;
+}
+
+header div { /* Bild und Navigation Platzierung */
+    display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
+}
+
+header nav { /* Navigation im Kopfbereich */
+    flex: 0 1 calc(100% - 100px); /* Berechnter Wert von 100 px des Logos abezogen von 100% Breite */
+    padding-top: 60px;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav a {
+    color: grey;
     text-decoration: none;
-       
-    float: right;     
-    display:  block;     
-   
-    padding: 20px;     
-    text-decoration: none;     
-   
-} 
-
-.container2 a:hover{ 
-    color:    rgb(103, 171, 103); }
-
-.aside-headline {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    display: inline-block;
 }
 
-#index{
-    background-color: white;
-    font-size: small;
-}
-
-#Steckbrief{
-    background-color:  white;
-    font-size: small;
-}
-
-#Kontakt{
-    background-color:   white;
-    font-size: small;
-}
-
-main{
-    background-color: rgba(88, 145, 88, 0.762);
-
-}
-
-body{
-    background-image: url("bg.png");
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-
-}
-
-.container{ 
-    text-align: left;
-    margin: auto;
-    padding: 50px;
-    margin-top: 50px;
-    height: auto;
-    width: 800px;
-}
-
-.container2{ 
-    text-align: left;
-    margin: auto;
-    padding: 20px;
-    width: 800px;
-}
-  
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 60px;
-    font-variant: small-caps;
-    color: white;
-   
-
-}
-
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: large;
-    color: white; 
-}
-
-a {
+nav a:hover, nav a:focus {
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: oblique;
-
+    color: #6AAF43;
 }
-p {
+
+header ul {
+    list-style-type: none;
+    overflow: auto;
+}
+
+header li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.active {
+    color: black;
+    font-weight: 700;
+}
+
+
+/* Schrift Einstellungen */
+h1{
+    color: #037e4b; 
+	font-size: 2.2rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+	padding-top:12px;
+	padding-bottom: 12px;
+    text-transform: uppercase;
+}
+
+
+h2+p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    text-align: center;
-   
-}
+    text-align: justify; 
+    }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-}
-
-.Bildpolaroid {
-    background-color: black;
-    box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.19), 0 6px 15px 0 rgba(8, 8, 8, 0.19);
-    padding: 10px 15px;
-    margin-bottom: 30px;
-}
-
-.TextBild {
-    text-align: center;
-    margin: 30px 30px ; 
-    padding: 15px 15px;
-    margin-bottom: 30px;
+div h3{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-    color: white;
+    /* text-align: center; */
+    font-size: large; 
+    color: rgba(88, 145, 88, 0.762);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 12px;
+	padding-bottom: 12px;
+    margin-top: 0.4em;
+    margin-bottom: 0.7em;
 }
 
-table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-th, td {
-    border-bottom: 1px solid #ddd;
-    text-align: left;  
+p {
+    margin-bottom: 1em;
+    text-align: justify;
 }
 
-td{
-    height: 30px;
-}
-
-tr:nth-child(even){
-    background-color: lightgray;
-}
-
-th {
-    background-color:  lightslategray;
-    color:white;
-    height: 50px;
-}
-
-ul, li {
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
-    text-align: center;
-}
-
-video {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-form{
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-   
-}
-
-.formTitel{
-    font-family: Arial, Helvetica, sans-serif;
-
-    color:white; 
-    text-align: left;
-}
-.labelForm{
-    font-size: large;
-    
-}
-
-.formstyle{
-    border: 0px;
-    background-color: #CCCCCC;
-    padding-right: 241px;
-    padding-left: 240px;
-    margin-left: 70px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    padding-top: 8px;
-    margin-top: 0px;
-}
-
-.formNachrichtfeld{
-    border: 0px;
-    background-color: #CCCCCC;
-    padding-left: 240px;
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
-.formbutton{
-    height: 30px;
-    width: 100px;
-    border: 0px;
-    background-color: rgba(37, 65, 37, 0.762);
-    color: white;
-    } 
-
+/* Footer - Das Ende einer Website */
 .footer {
+    overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     font-size: small;
-    padding: 20px;
-    background-color: rgba(88, 145, 88, 0.762);
-    font-variant: small-caps;
+    padding: 10px;
+    background-color: grey;
+    font-variant:small-caps;
 }
+
 .footer a{
     font-family: Arial, Helvetica, sans-serif;
     text-align: right;
     color: white;
 }
 
+/* UntereNavigation */
+.SocialNavigation{
+    overflow: hidden;
+    width: auto;
+    text-align: center;
+    background-color: rgba(88, 145, 88, 0.762);
+}
+
 .fa.fa-instagram{
     color: black;
     font-size: 40px;
+    
 }
 
 .fa.fa-twitter{
@@ -241,8 +143,30 @@ form{
 }
 
 .fa:hover{
-    background-color: rgba(255, 255, 255, 0.762);
+    background-color: rgba(88, 145, 88, 0.762);
    
 }
+ 
+/* Auflösungen Smartphone 600px */
+@media  screen and (max-width: 600px) {
 
+    }
+/* Auflösung Tablet */
+@media (min-width: 801px) and (max-width: 1024px) {
+    
+}
+@media screen and (min-width:1024px) {
+    section#content div {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    main {
+        flex:0 1 75%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
 
