@@ -16,7 +16,7 @@ body {
     line-height: 1.5em;
 }
 header { /* Kopfbereich */
-    background-color: rgba(241, 241, 241, 0.932);
+    background-color: rgba(247, 247, 247, 0.932);
     height: flex;    
     position: sticky; /* wenn fixed verschwindet es unter dem banner */
     top: 0;
@@ -30,7 +30,7 @@ header div { /* Bild und Navigation Platzierung */
 }
 
 header nav { /* Navigation im Kopfbereich */
-    flex: 0 1 calc(100% - 100px); /* Berechnter Wert von 100 px des Logos abezogen von 100% Breite */
+    /* flex: 0 1 calc(100% - 100px); Berechnter Wert von 100 px des Logos abezogen von 100% Breite */
     padding-top: 60px;
     text-align: center;
     overflow: hidden;
@@ -63,7 +63,41 @@ header li {
     color: black;
     font-weight: 700;
 }
+/* Dropdown der Navigation */
+li a, .dropbtn { 
+    display: inline-block;
+    padding: 14px;
+    text-decoration: none;
+  }
 
+li.dropdown { 
+    display: inline-block;
+  }
+  
+.dropdown-content { 
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px black;
+    z-index: 1;
+    background-color: white;
+  }
+  
+.dropdown-content a { 
+    color: grey;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.dropdown-content a:hover { 
+      background-color: #f1f1f1;
+  } 
+  
+.dropdown:hover .dropdown-content { 
+      display: block;
+  }
 
 /* Schrift Einstellungen */
 h1{
@@ -75,7 +109,6 @@ h1{
 	padding-bottom: 12px;
     text-transform: uppercase;
 }
-
 
 h2+p{
     font-family: Arial, Helvetica, sans-serif;
@@ -95,11 +128,74 @@ div h3{
     margin-top: 0.4em;
     margin-bottom: 0.7em;
 }
+div>p{
+    color: blueviolet;
+}
 
 p {
     margin-bottom: 1em;
     text-align: justify;
 }
+/* Bilder und Videos */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Transitionen */
+.divTransitionen {
+    width: 100px;
+    height: 100px;
+    background: rgba(1, 141, 76, 0.904);
+    transition: width 3s;
+  }
+  
+.divTransitionen:hover {
+    width: 300px;
+  }
+
+/* Kontaktformular */
+form{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.formTitel{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(88, 145, 88); 
+    text-align: left;
+    font-size: xx-large;
+}
+
+.formstyle{
+    font-size: large;
+    text-align: left;
+    border: 0px;
+    color: black;
+    background-color: #CCCCCC;
+    padding-right: 350px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    margin-top: 0px;
+}
+
+.formbutton{
+    height: 30px;
+    width: 100px;
+    border: 0px;
+    background-color: rgba(88, 145, 88, 0.762);
+    color: white;
+    } 
 
 /* Footer - Das Ende einer Website */
 .footer {
@@ -108,7 +204,7 @@ p {
     text-align: left;
     font-size: small;
     padding: 10px;
-    background-color: grey;
+    background-color: rgba(88, 145, 88, 0.762);;
     font-variant:small-caps;
 }
 
