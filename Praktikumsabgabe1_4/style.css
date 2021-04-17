@@ -30,7 +30,6 @@ header div { /* Bild und Navigation Platzierung */
 }
 
 header nav { /* Navigation im Kopfbereich */
-    /* flex: 0 1 calc(100% - 100px); Berechnter Wert von 100 px des Logos abezogen von 100% Breite */
     padding-top: 60px;
     text-align: center;
     overflow: hidden;
@@ -99,29 +98,48 @@ li.dropdown {
       display: block;
   }
 
+header img { /* Bild im Kopfbereich */
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+header div { /* Bild und Navigation Platzierung */
+    display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
+}
+
+header figure {
+    flex: 0 1 100px;
+}
 /* Schrift Einstellungen */
 h1{
     color: #037e4b; 
-	font-size: 2.2rem;
+    text-align: center;
+	font-size: 45px;
 	margin-bottom: 1rem;
 	font-weight: 700;
-	padding-top:12px;
+	padding-top: 12px;
 	padding-bottom: 12px;
     text-transform: uppercase;
+}
+h2{
+    color: rgba(0, 121, 74, 0.863); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    text-align: center;
 }
 
 h2+p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    text-align: justify; 
+    text-align: center;  
     }
 
 div h3{
     font-family: Arial, Helvetica, sans-serif;
-    /* text-align: center; */
+    text-align: center; 
     font-size: large; 
     color: rgba(88, 145, 88, 0.762);
-    font-size: 1.5rem;
+    font-size: 35px;
     font-weight: 500;
     padding-top: 12px;
 	padding-bottom: 12px;
@@ -129,37 +147,45 @@ div h3{
     margin-bottom: 0.7em;
 }
 div>p{
-    color: blueviolet;
+    color: rgb(5, 5, 5);
+    text-align: center;
 }
 
 p {
     margin-bottom: 1em;
-    text-align: justify;
+    text-align: center;
 }
+
+.containerSchrift{
+    text-align: center;
+}
+
 /* Bilder und Videos */
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    max-width: 100%;
+    height: auto;
 }
+
+.divpolaroid {
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  }
+  
+.divcontainer {
+    text-align: center;
+    padding: 10px 20px;
+  }
 
 video {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-/* Transitionen */
-.divTransitionen {
-    width: 100px;
-    height: 100px;
-    background: rgba(1, 141, 76, 0.904);
-    transition: width 3s;
-  }
-  
-.divTransitionen:hover {
-    width: 300px;
-  }
 
 /* Kontaktformular */
 form{
@@ -187,6 +213,9 @@ form{
     padding-bottom: 10px;
     padding-top: 8px;
     margin-top: 0px;
+    padding-right: 150px;
+    height: 25px;
+    width: 350px;
 }
 
 .formbutton{
@@ -204,7 +233,7 @@ form{
     text-align: left;
     font-size: small;
     padding: 10px;
-    background-color: rgba(88, 145, 88, 0.762);;
+    background-color: rgba(88, 145, 88, 0.762);
     font-variant:small-caps;
 }
 
@@ -222,10 +251,14 @@ form{
     background-color: rgba(88, 145, 88, 0.762);
 }
 
+.fa.fa-youtube {
+   color: black;
+   font-size: 40px;   
+  }
+
 .fa.fa-instagram{
     color: black;
-    font-size: 40px;
-    
+    font-size: 40px;   
 }
 
 .fa.fa-twitter{
@@ -239,24 +272,32 @@ form{
 }
 
 .fa:hover{
-    background-color: rgba(88, 145, 88, 0.762);
-   
+    background-color: white;
 }
- 
+
+/* Transitionen */
+.divTransitionen {
+    width: 100px;
+    height: 100px;
+    background: rgba(1, 141, 76, 0.904);
+    transition: width 3s;
+  }
+  
+.divTransitionen:hover {
+    width: 300px;
+  }
+
 /* Auflösungen Smartphone 600px */
 @media  screen and (max-width: 600px) {
 
     }
 /* Auflösung Tablet */
-@media (min-width: 801px) and (max-width: 1024px) {
+@media screen and (min-width: 801px) and (max-width: 1024px) {
     
 }
+
 @media screen and (min-width:1024px) {
-    section#content div {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
+
     main {
         flex:0 1 75%;
         margin-top: 50px;
