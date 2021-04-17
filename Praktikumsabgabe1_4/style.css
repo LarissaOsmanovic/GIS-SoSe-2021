@@ -62,6 +62,7 @@ header li {
     color: black;
     font-weight: 700;
 }
+
 /* Dropdown der Navigation */
 li a, .dropbtn { 
     display: inline-block;
@@ -98,8 +99,9 @@ li.dropdown {
       display: block;
   }
 
-header img { /* Bild im Kopfbereich */
-    margin-top: 10px;
+/* Bild im Kopfbereich */
+header img { 
+    margin-top: 65px;
     margin-bottom: 4px;
 }
 
@@ -108,8 +110,9 @@ header div { /* Bild und Navigation Platzierung */
 }
 
 header figure {
-    flex: 0 1 100px;
+    flex: 0 10 300px;
 }
+
 /* Schrift Einstellungen */
 h1{
     color: #037e4b; 
@@ -289,15 +292,97 @@ form{
 
 /* Auflösungen Smartphone 600px */
 @media  screen and (max-width: 600px) {
+h1{
+    color: #037e4b; 
+    text-align: center;
+	font-size: 36px;
+	margin-bottom: 1rem;
+	font-weight: 700;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    text-transform: uppercase;
+}
+header { /* Kopfbereich */
+    background-color: rgba(247, 247, 247, 0.932);
+    height: flex;    
+    position: sticky; /* wenn fixed verschwindet es unter dem banner */
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.94;
+}
+header nav { /* Navigation im Kopfbereich */
+    padding-top: 30px;
+    overflow: hidden;
+    margin-left:150px;
+    float: right;
+    display: table;
+}
 
-    }
+nav a {
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: inline-block;
+}
+
+header img { 
+    margin-top: 65px;
+    margin-bottom: 4px;
+}
+
+header div { /* Bild und Navigation Platzierung */
+    display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
+}
+
+header figure {
+    flex: 0 10 200px;
+}
+
 /* Auflösung Tablet */
 @media screen and (min-width: 801px) and (max-width: 1024px) {
+    h1{
+        color: #037e4b; 
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-transform: uppercase;
+    }
+    header { /* Kopfbereich */
+        background-color: rgba(247, 247, 247, 0.932);
+        height: flex;    
+        position: sticky; /* wenn fixed verschwindet es unter dem banner */
+        top: 0;
+        right: 0;
+        left: 0;
+        opacity: 0.94;
+    }
+    header nav { /* Navigation im Kopfbereich */
+        padding-top: 30px;
+        overflow: hidden;
+        
+        float: right;     
+        display:  block;     
+       
+    }
+    
+    nav a {
+        color: grey;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        display: inline-block;
+    }
     
 }
 
 @media screen and (min-width:1024px) {
-
     main {
         flex:0 1 75%;
         margin-top: 50px;
@@ -306,4 +391,3 @@ form{
         margin-left: 0;
     }
 }
-
