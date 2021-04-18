@@ -488,8 +488,10 @@ li.dropdown {
     color: grey;
     padding: 16px;
     text-decoration: none;
-    display: block;
+    /* display: block; */
     text-align: left;
+    float: right;
+    display: block;
   }
   
 .dropdown-content a:hover { 
