@@ -26,16 +26,17 @@ header { /* Kopfbereich */
     
 }
 
-header div { /* Bild und Navigation Platzierung */
-    display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
-  
+header div { /*  Navigation Platzierung */
+    display: flexbox; 
+    float: right;
 }
+    
 
 header nav { /* Navigation im Kopfbereich */
     padding-top: 60px;
     text-align: center;
     overflow: hidden;
-    
+ 
 }
 
 nav a {
@@ -43,21 +44,23 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.125rem;
-    display: inline-block;
+    display: block;
+    
 }
-
 nav a:hover, nav a:focus {
     text-decoration: none;
     color: #6AAF43;
 }
 
 header ul {
+   
     list-style-type: none;
     overflow: auto;
     padding-left: 990px;
 }
 
 header li {
+    
     display: inline-block;
     margin-right: 20px;
 }
@@ -321,11 +324,11 @@ form{
 }
 
 /* Auflösung Tablet */
-@media screen and (max-width: 800px) {
+@media screen and (min-width:600px) and (max-width: 1024px) {
     h1{
         color: #037e4b; 
         text-align: center;
-        font-size: 36px;
+        font-size: 35px;
         margin-bottom: 1rem;
         font-weight: 600;
         padding-top: 12px;
@@ -336,17 +339,23 @@ form{
         background-color: rgba(247, 247, 247, 0.932);
         height: flex;    
         position: sticky; /* wenn fixed verschwindet es unter dem banner */
-        top: 0;
-        right: 0;
-        left: 0;
+        margin: 0;
+    padding: 0;   
+    top: 0;   
         opacity: 0.94;
+        float: right;
+    }
+    header div { /*  Navigation Platzierung */
+         
+        display:  block; 
+        float: right;
     }
     header nav { /* Navigation im Kopfbereich */
         padding-top: 30px;
         overflow: hidden;
         margin-left:150px;
+        display: flex;
         float: right;
-        display: table;
     }
     
     nav a {
@@ -360,13 +369,25 @@ form{
     header ul {
         list-style-type: none;
         overflow: auto;
-        padding-left: 230px;
+        
+      
     }
     
     header li {
         display: inline-block;
-        margin-right: 20px;
+        margin-right:20px;
     }
+
+    .footer {
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        font-size: medium;
+        padding: 10px;
+        background-color: rgba(88, 145, 88, 0.762);
+        font-variant:small-caps;
+    }
+    
     .divTransitionen {
         width: 100px;
         height: 100px;
@@ -391,6 +412,11 @@ h1{
 	padding-top: 12px;
 	padding-bottom: 12px;
     text-transform: uppercase;
+}
+
+header div { /*  Navigation Platzierung */
+    display: flexbox; 
+    float: right;
 }
 header { /* Kopfbereich */
     background-color: rgba(247, 247, 247, 0.932);
@@ -438,6 +464,14 @@ header li {
 .divTransitionen:hover {
     width: 300px;
   }
-
+.footer {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: medium;
+    padding: 10px;
+    background-color: rgba(88, 145, 88, 0.762);
+    font-variant:small-caps;
+}
 
 }
