@@ -178,6 +178,38 @@ video {
     margin-right: auto;
 }
 
+/* Tabelle */
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    text-align: left;  
+}
+
+td{
+    height: 30px;
+}
+
+tr:nth-child(2n){
+    background-color: lightgray;
+}
+
+th {
+    background-color:  rgb(103, 171, 103);
+    color:white;
+    height: 50px;
+}
+
+ul, li {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-align: center;
+}
+
 /* Kontaktformular */
 form{
     text-align: left;
@@ -289,11 +321,11 @@ form{
 }
 
 /* Auflösung Tablet */
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     h1{
         color: #037e4b; 
         text-align: center;
-        font-size: 38px;
+        font-size: 36px;
         margin-bottom: 1rem;
         font-weight: 600;
         padding-top: 12px;
@@ -328,7 +360,7 @@ form{
     header ul {
         list-style-type: none;
         overflow: auto;
-        padding-left: 350px;
+        padding-left: 230px;
     }
     
     header li {
