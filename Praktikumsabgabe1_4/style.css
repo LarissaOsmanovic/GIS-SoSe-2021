@@ -23,14 +23,9 @@ header { /* Kopfbereich */
     right: 0;
     left: 0;
     opacity: 0.94;
+    float:right;
     
 }
-
-header div { /*  Navigation Platzierung */
-    display: flexbox; 
-    float: right;
-}
-    
 
 header nav { /* Navigation im Kopfbereich */
     padding-top: 60px;
@@ -345,11 +340,6 @@ form{
         opacity: 0.94;
         float: right;
     }
-    header div { /*  Navigation Platzierung */
-         
-        display:  block; 
-        float: right;
-    }
     header nav { /* Navigation im Kopfbereich */
         padding-top: 30px;
         overflow: hidden;
@@ -366,10 +356,10 @@ form{
         font-size: 15px;
         display: inline-block;
     }
+    
     header ul {
         list-style-type: none;
-        overflow: auto;
-        
+        overflow: auto;  
       
     }
     
@@ -414,10 +404,6 @@ h1{
     text-transform: uppercase;
 }
 
-header div { /*  Navigation Platzierung */
-    display: flexbox; 
-    float: right;
-}
 header { /* Kopfbereich */
     background-color: rgba(247, 247, 247, 0.932);
     height: flex;    
@@ -426,6 +412,7 @@ header { /* Kopfbereich */
     right: 0;
     left: 0;
     opacity: 0.94;
+    float: right;
 }
 header nav { /* Navigation im Kopfbereich */
     padding-top: 30px;
