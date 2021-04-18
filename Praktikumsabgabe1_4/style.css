@@ -16,23 +16,26 @@ body {
     line-height: 1.5em;
 }
 header { /* Kopfbereich */
-    background-color: rgba(247, 247, 247, 0.932);
+    background-color: rgba(255, 255, 255, 0.932);
     height: flex;    
     position: sticky; /* wenn fixed verschwindet es unter dem banner */
     top: 0;
     right: 0;
     left: 0;
     opacity: 0.94;
+    
 }
 
 header div { /* Bild und Navigation Platzierung */
     display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
+  
 }
 
 header nav { /* Navigation im Kopfbereich */
     padding-top: 60px;
     text-align: center;
     overflow: hidden;
+    
 }
 
 nav a {
@@ -51,6 +54,7 @@ nav a:hover, nav a:focus {
 header ul {
     list-style-type: none;
     overflow: auto;
+    padding-left: 990px;
 }
 
 header li {
@@ -99,20 +103,6 @@ li.dropdown {
       display: block;
   }
 
-/* Bild im Kopfbereich */
-header img { 
-    margin-top: 65px;
-    margin-bottom: 4px;
-}
-
-header div { /* Bild und Navigation Platzierung */
-    display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
-}
-
-header figure {
-    flex: 0 10 300px;
-}
-
 /* Schrift Einstellungen */
 h1{
     color: #037e4b; 
@@ -135,6 +125,7 @@ h2+p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     text-align: center;  
+    
     }
 
 div h3{
@@ -150,14 +141,11 @@ div h3{
     margin-bottom: 0.7em;
 }
 div>p{
-    color: rgb(5, 5, 5);
-    text-align: center;
-}
-
-p {
+    color: black;
     margin-bottom: 1em;
     text-align: center;
 }
+
 
 .containerSchrift{
     text-align: center;
@@ -290,6 +278,76 @@ form{
     width: 300px;
   }
 
+@media screen and (min-width:1024px) {
+    main {
+        flex:0 1 75%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/* Auflösung Tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    h1{
+        color: #037e4b; 
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-transform: uppercase;
+    }
+    header { /* Kopfbereich */
+        background-color: rgba(247, 247, 247, 0.932);
+        height: flex;    
+        position: sticky; /* wenn fixed verschwindet es unter dem banner */
+        top: 0;
+        right: 0;
+        left: 0;
+        opacity: 0.94;
+    }
+    header nav { /* Navigation im Kopfbereich */
+        padding-top: 30px;
+        overflow: hidden;
+        margin-left:150px;
+        float: right;
+        display: table;
+    }
+    
+    nav a {
+        color: grey;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        display: inline-block;
+    }
+    header ul {
+        list-style-type: none;
+        overflow: auto;
+        padding-left: 350px;
+    }
+    
+    header li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .divTransitionen {
+        width: 100px;
+        height: 100px;
+        background: rgba(1, 141, 76, 0.904);
+        transition: width 3s;
+      }
+      
+    .divTransitionen:hover {
+        width: 300px;
+      }
+}
+
+
 /* Auflösungen Smartphone 600px */
 @media  screen and (max-width: 600px) {
 h1{
@@ -328,66 +386,26 @@ nav a {
     display: inline-block;
 }
 
-header img { 
-    margin-top: 65px;
-    margin-bottom: 4px;
+header ul {
+    list-style-type: none;
+    overflow: auto;
+    padding-left: 47px;
 }
 
-header div { /* Bild und Navigation Platzierung */
-    display: flex; /* erstellt einen Flexbox Bereich um Logo und Navigation nebeneinander zu platzieren */
+header li {
+    display: inline-block;
+    margin-right: 20px;
 }
+.divTransitionen {
+    width: 100px;
+    height: 100px;
+    background: rgba(1, 141, 76, 0.904);
+    transition: width 3s;
+  }
+  
+.divTransitionen:hover {
+    width: 300px;
+  }
 
-header figure {
-    flex: 0 10 200px;
-}
 
-/* Auflösung Tablet */
-@media screen and (min-width: 801px) and (max-width: 1024px) {
-    h1{
-        color: #037e4b; 
-        text-align: center;
-        font-size: 38px;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-transform: uppercase;
-    }
-    header { /* Kopfbereich */
-        background-color: rgba(247, 247, 247, 0.932);
-        height: flex;    
-        position: sticky; /* wenn fixed verschwindet es unter dem banner */
-        top: 0;
-        right: 0;
-        left: 0;
-        opacity: 0.94;
-    }
-    header nav { /* Navigation im Kopfbereich */
-        padding-top: 30px;
-        overflow: hidden;
-        
-        float: right;     
-        display:  block;     
-       
-    }
-    
-    nav a {
-        color: grey;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 15px;
-        display: inline-block;
-    }
-    
-}
-
-@media screen and (min-width:1024px) {
-    main {
-        flex:0 1 75%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-right: 0;
-        margin-left: 0;
-    }
 }
