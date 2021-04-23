@@ -296,22 +296,13 @@ form{
     width: 100px;
     height: 100px;
     background: rgba(1, 141, 76, 0.904);
-    transition: width 3s;
+    transition: width 4s;
   }
   
 .divTransitionen:hover {
     width: 300px;
   }
 
-@media screen and (min-width:1024px) {
-    main {
-        flex:0 1 75%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-right: 0;
-        margin-left: 0;
-    }
-}
 
 /* Auflösung Tablet */
 @media screen and (min-width:600px) and (max-width: 1024px) {
@@ -325,80 +316,12 @@ form{
         padding-bottom: 12px;
         text-transform: uppercase;
     }
-    header { /* Kopfbereich */
-        background-color: rgba(247, 247, 247, 0.932);
-        height: flex;    
-        position: sticky; /* wenn fixed verschwindet es unter dem banner */
-        top: 0;
-        right: 0;
-        left: 0;
-        opacity: 0.94;
-    }
-    header nav { /* Navigation im Kopfbereich */
-        padding-top: 30px;
-        overflow: hidden;
-        margin-left:150px;
-        
-    }
-    
-    nav a {
-        color: grey;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 15px;
-    }
-    header ul {
-        text-align: right;
-        list-style-type: none;
-        overflow: hidden;
-    }
-    
-    header li {
-        display: inline;
-        margin-right:20px;
-    }
-/* Dropdown der Navigation */
-li a, .dropbtn { 
-    display: inline-block;
-    padding: 14px;
-    text-decoration: none;
-  }
-
-li.dropdown { 
-    display: inline-block;
-  }
-  
-.dropdown-content { 
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px black;
-    z-index: 1;
-    background-color: white;
-  }
-  
-.dropdown-content a { 
-    color: grey;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-.dropdown-content a:hover { 
-      background-color: #f1f1f1;
-  } 
-  
-.dropdown:hover .dropdown-content { 
-      display: block;
-  }
 
     .footer {
         overflow: hidden;
         font-family: Arial, Helvetica, sans-serif;
         text-align: left;
-        font-size: medium;
+        font-size: 15px;
         padding: 10px;
         background-color: rgba(88, 145, 88, 0.762);
         font-variant:small-caps;
@@ -416,7 +339,6 @@ li.dropdown {
       }
 }
 
-
 /* Auflösungen Smartphone 600px */
 @media  screen and (max-width: 600px) {
 h1{
@@ -430,88 +352,17 @@ h1{
     text-transform: uppercase;
 }
 
-header { /* Kopfbereich */
-    background-color: rgba(247, 247, 247, 0.932);
-    height: flex;    
-    position: sticky; /* wenn fixed verschwindet es unter dem banner */
-    top: 0;
-    right: 0;
-    left: 0;
-    opacity: 0.94;
-}
-header nav { /* Navigation im Kopfbereich */
-    padding-top: 30px;
-    overflow: hidden;
-    margin-left:150px;
-    
-}
-
-nav a {
-    color: grey;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-header ul {
-    text-align: right;
-    list-style-type: none;
-    overflow: hidden; 
-}
-
-header li {
-    display: inline;
-    margin-right: 20px;
-}
-/* Dropdown der Navigation */
-li a, .dropbtn { 
-    display: inline-block;
-    padding: 14px;
-    text-decoration: none;
-  }
-
-li.dropdown { 
-    display: inline-block;
-  }
-  
-.dropdown-content { 
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px black;
-    z-index: 1;
-    background-color: white;
-  }
-  
-.dropdown-content a { 
-    color: grey;
-    padding: 16px;
-    text-decoration: none;
-    /* display: block; */
-    text-align: left;
-    float: right;
-    display: block;
-  }
-  
-.dropdown-content a:hover { 
-      background-color: #f1f1f1;
-  } 
-  
-.dropdown:hover .dropdown-content { 
-      display: block;
-  }
-
 .divTransitionen {
     width: 100px;
     height: 100px;
     background: rgba(1, 141, 76, 0.904);
-    transition: width 3s;
+    transition: width 4s;
   }
   
 .divTransitionen:hover {
     width: 300px;
   }
+
 .footer {
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
