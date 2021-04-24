@@ -118,8 +118,11 @@ factorial();
 // Aufgabe 6
 // a
 function hashtagPrint1() {
-    const hashtag1 = [];
-    console.log(hashtagPrint1);
+    var hashtag1 = [];
+    while (0 < 8) {
+        hashtag1.push("#");
+        console.log(hashtagPrint1);
+    }
 }
 hashtagPrint1();
 // function hashtagPrint (): string { 
