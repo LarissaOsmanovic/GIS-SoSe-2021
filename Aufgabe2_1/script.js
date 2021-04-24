@@ -117,6 +117,11 @@ factorial();
 // leapyears ();
 // Aufgabe 6
 // a
+function hashtagPrint1() {
+    const hashtag1 = [];
+    console.log(hashtagPrint1);
+}
+hashtagPrint1();
 // function hashtagPrint (): string { 
 //  let hashtag1: string  = " # # # #";
 //  let hashtag2: string  = "# # # # ";
