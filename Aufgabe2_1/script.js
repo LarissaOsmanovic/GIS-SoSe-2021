@@ -118,7 +118,8 @@ factorial();
 // Aufgabe 6
 // a
 function hashtagPrint1() {
-    var hashtag1 = [];
+    // tslint:disable-next-line: typedef
+    let hashtag1 = [];
     while (0 < 8) {
         hashtag1.push("#");
         console.log(hashtagPrint1);
