@@ -75,7 +75,7 @@ function hochzählen() {
         x = x + i;
         i++;
     }
-    console.log();
+    console.log(i);
 }
 hochzählen();
 // d
