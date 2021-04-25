@@ -89,17 +89,17 @@ function getRandom() {
     }
     getRandom();
     // e
-    function factorial() {
-        let n = 6;
-        let fakultät = 1;
-        let durchlauf = 1;
-        while (1 < n) {
-            fakultät = fakultät * durchlauf;
-            durchlauf++;
-        }
-        console.log(fakultät);
-    }
-    factorial();
+    // function factorial(): void {
+    //     let n: number = 6;
+    //     let fakultät: number = 1;
+    //     let durchlauf: number = 1;
+    //     while (1 < n) {
+    //   fakultät = fakultät * durchlauf;
+    //   durchlauf++;
+    //     }   
+    //     console.log(fakultät);
+    // } 
+    // factorial();
     //Weiß nicht was daran falsch ist, aber irgendwie hängt dadurch meine komplette Seite
     // f
     function leapyears() {
