@@ -73,93 +73,92 @@ function hochzählen() {
     let i = 1;
     while (i > 100) {
         x = x + i;
-        i++;
+        i = i + 1;
     }
-    console.log(i);
+    console.log(x);
 }
-hochzählen();
 // d
 function getRandom() {
-    for (let i = 0; 0 < 100; i++) {
-        Math.floor(Math.random() * 101);
+    let x = 0;
+    let y = 100;
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
     }
-    console.log(Math.random);
-}
-getRandom();
-// e
-function factorial() {
-    let n = 6;
-    let fakultät = 1;
-    let durchlauf = 1;
-    while (1 < n) {
-        fakultät = fakultät * durchlauf;
-        durchlauf++;
+    for (let i = 0; i < 10; i++) {
+        console.log(getRandomArbitrary(x, y));
     }
-    console.log(fakultät);
-}
-factorial();
-// f
-// function leapyears(): void {
-//     let jahreszahl: number = 0;
-//     let schaltjahr: number = 0;
-//     if (jahreszahl / 4) {
-//     Boolean (true);
-//     if (jahreszahl / 400) {
-//     Boolean (true);
-//     } else {
-//         Boolean (false);
-//     }
-// }
-//     for (let index = 0; 1900 < 2021; index++) {
-//       schaltjahr =;
-//    }
-// }
-// leapyears ();
-// Aufgabe 6
-// a
-function hashtagPrint1() {
-    // tslint:disable-next-line: typedef
-    let hashtag1 = [];
-    while (0 < 8) {
-        hashtag1.push("#");
-        console.log(hashtagPrint1);
+    getRandom();
+    // e
+    function factorial() {
+        let n = 6;
+        let fakultät = 1;
+        let durchlauf = 1;
+        while (1 < n) {
+            fakultät = fakultät * durchlauf;
+            durchlauf++;
+        }
+        console.log(fakultät);
     }
+    factorial();
+    //Weiß nicht was daran falsch ist, aber irgendwie hängt dadurch meine komplette Seite
+    // f
+    function leapyears() {
+        for (let i = 1900; 1900 < 2021; i++) {
+            if ((i % 4) == 0 && (i % 100) != 0) {
+                console.log(i);
+            }
+        }
+    }
+    leapyears();
+    // Aufgabe 6
+    // a
+    // function hashtagPrint1(): void {
+    //   // tslint:disable-next-line: typedef
+    //   let hashtag1 = [];
+    //   while (0 < 8) {
+    //       hashtag1.push("#");
+    //       console.log(hashtagPrint1);
+    //   }
+    // }
+    // hashtagPrint1 ();
+    // for (let hash = "#"; hash.length <= 7 ; hash += "#"){
+    //     console.log(hash);
+    //     }
+    // b & c
+    // function fizzBuzz(num: number) {
+    //     if (num % 5 == 0 && num % 3 == 0) return "fizzbuzz";
+    //     if (num % 5 == 0) return "fizz";
+    //     if (num % 3 == 0) return "buzz";
+    //     return num;
+    //     }
+    // for (let i: number = 1; i <= 100; i++) console.log(fizzBuzz(i));
+    // d
+    let hashtag = "#";
+    function schachbrett() {
+        for (let i = 0; i < 8; i++) {
+            if (i % 2 == 0) {
+                console.log("" + hashtag + "" + hashtag + "" + "\n");
+            }
+            else {
+                console.log(hashtag + "" + hashtag + "" + hashtag + "\n");
+            }
+        }
+    }
+    schachbrett();
+    // e
+    let hoehe = 50;
+    let row;
+    function schachbrett1(_row, hoehe) {
+        let hashtag1 = "#";
+        for (let i = 0; i < hoehe; i++) {
+            if (i % 2 == 0) {
+                console.log("" + hashtag1 + "" + hashtag1 + "" + "\n");
+            }
+            else {
+                console.log(hashtag1 + "" + hashtag1 + "" + hashtag1 + "\n");
+            }
+        }
+    }
+    schachbrett1(row, hoehe);
 }
-hashtagPrint1();
-// function hashtagPrint (): string { 
-//  let hashtag1: string  = " # # # #";
-//  let hashtag2: string  = "# # # # ";
-//  let finalString: string  = "";
-//  for (let index = 1; index < 9; index++) {
-//       if (index % 2 == 0) {
-//           finalString = finalString + hashtag2 + "\n" ;
-//       }
-//       else {
-//           finalString = finalString + hashtag1 + "\n" ;
-//       }
-//  }
-// //  for (let index = 0; index < array.length; index++) {
-// // } 
-//  return finalString;
-// }  
-// console.log(hashtagPrint);  
-// function hashtagPrint2 (): string {
-//     let finalString: string  = "";
-//     let count: number = 0;
-//     // tslint:disable-next-line: typedef
-//     for (let index = 1; index <= 8; index++) {
-//      for (let index = 1; index <= 8; index++) {
-//             if (count % 2 == 0) {
-//                 finalString += "#";
-//             } else {
-//                 finalString += " ";
-//             }
-//             count++;
-//      }
-//      finalString = finalString + "\n";
-//    }
-//     return finalString;
-// }
-// console.log("test");
-// console.log(hashtagPrint2);  
 //# sourceMappingURL=script.js.map
