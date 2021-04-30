@@ -3,26 +3,28 @@
 function a1() {
     let x = "Alles";
     console.log(x);
+    b1();
+    console.log(x);
     func6();
+    console.log(x);
     console.log("Logo!");
-    func7();
-    func8();
-    func9();
-    console.log("Alles Gute! Alles klar? Alles Logo?");
 }
 a1();
+function b1() {
+    console.log("Gute!");
+}
 function func6() {
-    console.log("Klar?");
+    console.log("klar?");
 }
-function func7() {
-    console.log("Fit?");
-}
-function func8() {
-    console.log("Wach?");
-}
-function func9() {
-    console.log("Hallo!!");
-}
+// function func7(): void {
+//     console.log("Fit?");
+// }
+// function func8(): void {
+//     console.log("Wach?");
+// }
+// function func9(): void {
+//     console.log("Hallo!!");
+// }
 //Aufgabe2
 function a2() {
     let i = 9;
@@ -52,26 +54,29 @@ function func3() {
 }
 // Aufgabe 5
 // a
-function multiply() {
-    let a = 5;
-    let b = 5;
-    console.log(a * b);
+let a = 5;
+let b = 5;
+function multiply(_a, _b) {
+    console.log(_a * _b);
 }
-multiply();
-//b
-function max() {
-    let y = 20;
-    let z = 9;
-    if (y > z) {
-        console.log(y);
+multiply(a, b);
+//b _ Parameter
+let y = 20;
+let z = 9;
+function max(_y, _z) {
+    if (_y > _z) {
+        console.log(_y);
+    }
+    else {
+        console.log(_z);
     }
 }
-max();
+max(y, z);
 // c
 function hochzählen() {
     let x = 0;
     let i = 1;
-    while (i > 100) {
+    while (i < 100) {
         x = x + i;
         i = i + 1;
     }
@@ -87,78 +92,97 @@ function getRandom() {
     for (let i = 0; i < 10; i++) {
         console.log(getRandomArbitrary(x, y));
     }
-    getRandom();
-    // e
-    // function factorial(): void {
-    //     let n: number = 6;
-    //     let fakultät: number = 1;
-    //     let durchlauf: number = 1;
-    //     while (1 < n) {
-    //   fakultät = fakultät * durchlauf;
-    //   durchlauf++;
-    //     }   
-    //     console.log(fakultät);
-    // } 
-    // factorial();
-    //Weiß nicht was daran falsch ist, aber irgendwie hängt dadurch meine komplette Seite
-    // f
-    function leapyears() {
-        for (let i = 1900; 1900 < 2021; i++) {
-            if ((i % 4) == 0 && (i % 100) != 0) {
-                console.log(i);
-            }
-        }
-    }
-    leapyears();
-    // Aufgabe 6
-    // a
-    // function hashtagPrint1(): void {
-    //   // tslint:disable-next-line: typedef
-    //   let hashtag1 = [];
-    //   while (0 < 8) {
-    //       hashtag1.push("#");
-    //       console.log(hashtagPrint1);
-    //   }
-    // }
-    // hashtagPrint1 ();
-    // for (let hash = "#"; hash.length <= 7 ; hash += "#"){
-    //     console.log(hash);
-    //     }
-    // b & c
-    // function fizzBuzz(num: number) {
-    //     if (num % 5 == 0 && num % 3 == 0) return "fizzbuzz";
-    //     if (num % 5 == 0) return "fizz";
-    //     if (num % 3 == 0) return "buzz";
-    //     return num;
-    //     }
-    // for (let i: number = 1; i <= 100; i++) console.log(fizzBuzz(i));
-    // d
-    let hashtag = "#";
-    function schachbrett() {
-        for (let i = 0; i < 8; i++) {
-            if (i % 2 == 0) {
-                console.log("" + hashtag + "" + hashtag + "" + "\n");
-            }
-            else {
-                console.log(hashtag + "" + hashtag + "" + hashtag + "\n");
-            }
-        }
-    }
-    schachbrett();
-    // e
-    let hoehe = 50;
-    let row;
-    function schachbrett1(_row, hoehe) {
-        let hashtag1 = "#";
-        for (let i = 0; i < hoehe; i++) {
-            if (i % 2 == 0) {
-                console.log("" + hashtag1 + "" + hashtag1 + "" + "\n");
-            }
-            else {
-                console.log(hashtag1 + "" + hashtag1 + "" + hashtag1 + "\n");
-            }
-        }
-    }
-    schachbrett1(row, hoehe);
 }
+getRandom();
+// e
+function factorial(fakultät) {
+    let ergbnis = 1;
+    let durchlauf = 1;
+    do {
+        ergbnis = ergbnis * durchlauf;
+        durchlauf++;
+    } while (durchlauf <= fakultät);
+    return ergbnis;
+}
+console.log(factorial(6));
+// f
+let jahr1 = 1900;
+let jahr2 = 2021;
+function leapyears(_zieljahr, _startjahr) {
+    for (let i = _startjahr; i < _zieljahr; i++) {
+        if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
+            console.log(i);
+        }
+    }
+}
+leapyears(jahr1, jahr2);
+// Aufgabe 6
+// a
+let hashtag2 = "";
+for (let index = 0; index < 7; index++) {
+    hashtag2 = hashtag2 + "#";
+    console.log(hashtag2);
+}
+// b & c
+function fizzBuzz(num) {
+    if (num % 5 == 0 && num % 3 == 0)
+        console.log("fizzbuzz");
+    if (num % 5 == 0)
+        console.log("fizz");
+    if (num % 3 == 0)
+        console.log("buzz");
+}
+for (let i = 1; i <= 100; i++) {
+    fizzBuzz(i);
+}
+// d
+let hashtag = "#";
+let leerzeichen = " ";
+let schachbrett2 = "";
+function schachbrett() {
+    for (let i = 0; i < 8; i++) {
+        if (i % 2 == 0) {
+            for (let i = 0; i < 4; i++) {
+                schachbrett2 = schachbrett2 + leerzeichen;
+                schachbrett2 = schachbrett2 + hashtag;
+            }
+            schachbrett2 = schachbrett2 + "\n";
+        }
+        else {
+            for (let i = 0; i < 4; i++) {
+                schachbrett2 = schachbrett2 + hashtag;
+                schachbrett2 = schachbrett2 + leerzeichen;
+            }
+            schachbrett2 = schachbrett2 + "\n";
+        }
+    }
+    console.log(schachbrett2);
+}
+schachbrett();
+// e
+let row = "";
+let row2 = "";
+function schachbrett1(_hoehe) {
+    for (let i = 0; i < _hoehe; i++) {
+        if (i % 2 == 0) {
+            row = row + leerzeichen;
+            row2 = row2 + hashtag;
+        }
+        else {
+            row = row + hashtag;
+            row2 = row2 + leerzeichen;
+        }
+    }
+    for (let i = 0; i < _hoehe; i++) {
+        if (i % 2 == 0) {
+            schachbrett2 = schachbrett2 + row;
+        }
+        else {
+            schachbrett2 = schachbrett2 + row2;
+        }
+        schachbrett2 = schachbrett2 + "\n";
+    }
+    console.log(schachbrett2);
+}
+schachbrett1(13);
 //# sourceMappingURL=script.js.map
