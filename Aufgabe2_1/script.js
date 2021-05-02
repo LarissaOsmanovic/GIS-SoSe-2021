@@ -131,6 +131,8 @@ function fizzBuzz(num) {
         console.log("fizz");
     if (num % 3 == 0)
         console.log("buzz");
+    // Mit 3 else if und dann noch ein else anlegen. 
+    // Damit die Funktion nicht nur fizzbuzz ausgibt sondern auch die zahlen
 }
 for (let i = 1; i <= 100; i++) {
     fizzBuzz(i);

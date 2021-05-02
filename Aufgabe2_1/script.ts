@@ -149,15 +149,16 @@ leapyears(jahr1, jahr2);
 // a
 let hashtag2: string = "";
 for (let index: number = 0; index < 7; index++) {
-hashtag2 = hashtag2 + "#";
-console.log(hashtag2);
+    hashtag2 = hashtag2 + "#";
+    console.log(hashtag2);
 }
 // b & c
 function fizzBuzz(num: number): void {
     if (num % 5 == 0 && num % 3 == 0) console.log("fizzbuzz");
     if (num % 5 == 0) console.log("fizz");
     if (num % 3 == 0) console.log("buzz");
-
+    // Mit 3 else if und dann noch ein else anlegen. 
+    // Damit die Funktion nicht nur fizzbuzz ausgibt sondern auch die zahlen
 
 }
 for (let i: number = 1; i <= 100; i++) {
