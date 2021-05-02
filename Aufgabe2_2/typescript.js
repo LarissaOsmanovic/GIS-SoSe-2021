@@ -25,14 +25,20 @@ function isEven(_x3) {
 console.log(isEven(xb));
 let s1 = studentErschaffen("Mini", "Mouse", 24, 152466);
 let s2 = studentErschaffen("Frodo", "Beutlin", 18, 172895);
-let s3 = studentErschaffen("Chris", "Evans", 18, 193876);
-console.log(s1.name);
-console.log(s2.vorname);
-console.log(s3.alter);
+let s3 = studentErschaffen("Chris", "Evans", 21, 193876);
 function studentErschaffen(_vorname, _name, _alter, _matrikelnummer) {
     let s = { vorname: _vorname, name: _name, alter: _alter, matrikelnummer: _matrikelnummer };
     return s;
 }
+let studentArray = [];
+studentArray.push(s1);
+studentArray.push(s2);
+studentArray.push(s3);
+studentArray.push({ vorname: "Valerie", name: "Otto ", alter: 23, matrikelnummer: 182569 });
+console.log(s1.name);
+console.log(s2.vorname);
+console.log(s3.alter);
+console.log(studentArray[3].matrikelnummer);
 function showInfo(s) {
     console.log(s.name);
     console.log(s.matrikelnummer);
@@ -40,7 +46,7 @@ function showInfo(s) {
 showInfo(s1);
 showInfo(s2);
 showInfo(s3);
-// showInfo(studentArray[3]);
+showInfo(studentArray[3]);
 // Aufgabe 2
 // a Übergabeparameter verwenden
 // Arrayliste namens input
@@ -136,7 +142,7 @@ class Rechteck {
         context2.fillRect(this.xKoordinate, this.yKoordinate, this.breite, this.höhe);
     }
 }
-let rechteckArray = [];
+let rechteckArray = []; /*e*/
 for (let i = 0; i < 16; i++) {
     rechteckArray.push(new Rechteck); /*Objekt anlegen wo die Werte von draw.. reinkommen*/
     rechteckArray[i].drawRect();
