@@ -1,6 +1,6 @@
 // Aufagbe 1
 // a
-// ...empty ist ein Resteparameter
+// ...empty ist ein Resteparameter, alles was man anlegt wird da reingepackt
 function min(..._emptyArray: number[]): number {
     let minimum: number = _emptyArray[0];
     for (let i: number = 0; i < _emptyArray.length; i++) {
@@ -14,6 +14,7 @@ function min(..._emptyArray: number[]): number {
 let xb: number = 5;
 
 function isEven(_x3: number): boolean {
+    // _x3 = Math.abs(_x3); /* nimmt nur den betrag von einer Zahl, kann auch neg. zahlen bestimmen */
     if (_x3 == 0) { /* gerade */
         return true;
     }
