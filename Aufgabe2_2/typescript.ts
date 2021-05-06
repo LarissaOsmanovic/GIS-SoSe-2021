@@ -1,6 +1,7 @@
 // Aufagbe 1
 // a
-function min(_emptyArray: number[]): number {
+// ...empty ist ein Resteparameter
+function min(..._emptyArray: number[]): number {
     let minimum: number = _emptyArray[0];
     for (let i: number = 0; i < _emptyArray.length; i++) {
         if (minimum > _emptyArray[i]) {
@@ -9,8 +10,6 @@ function min(_emptyArray: number[]): number {
     }
     return minimum;
 }
-console.log(min([5, 42, 17, 2018, -10, 60, -10010]));
-
 //  b
 let xb: number = 5;
 
@@ -66,7 +65,7 @@ let studentArray: Student[] = [];
 studentArray.push(s1);
 studentArray.push(s2);
 studentArray.push(s3);
-studentArray.push({vorname: "Valerie", name: "Otto ", alter: 23, matrikelnummer: 182569 });
+studentArray.push({ vorname: "Valerie", name: "Otto ", alter: 23, matrikelnummer: 182569 });
 
 console.log(s1.name);
 console.log(s2.vorname);
@@ -88,7 +87,7 @@ showInfo(studentArray[3]);
 // Aufgabe 2
 // a Übergabeparameter verwenden
 // Arrayliste namens input
-let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
+let arr1: number[] = [5, 42, 17, 2018, -10, 60, -10010];
 function backwards(_input: number[]): number[] {
     let arr: number[] = new Array;
     for (let i: number = _input.length - 1; i >= 0; i--) {
@@ -96,15 +95,20 @@ function backwards(_input: number[]): number[] {
     }
     return arr;
 }
-console.log(backwards(arr));
+console.log(backwards(arr1));
 
 // b
 let gerade: number[] = [12, 14, 16, 18];
 let ungerade: number[] = [11, 23, 35, 47];
-function join(_array1: number[], _array2: number[]): void {
-    let zahlenZusammen: number[] = _array1.concat(_array2);
-    console.log(zahlenZusammen);
-
+function join(_array1: number[], _array2: number[]): number[] {
+    let zahlenZusammen: number[] = [];
+    for (let i: number = 0; i < _array1.length; i++) { /* */
+        zahlenZusammen.push(_array1[i]); /* erstes array in zahlenzusammen  hinzufügen*/
+    }
+    for (let i: number = 0; i < _array2.length; i++) { /* */
+        zahlenZusammen.push(_array2[i]); /* zweites array in zahlenzusammen  hinzufügen*/
+    }
+    return zahlenZusammen;
 }
 join(gerade, ungerade);
 
@@ -114,10 +118,13 @@ join(gerade, ungerade);
 let index1: number = 0;
 let index2: number = 4;
 function split(_arr: number[], _index1: number, _index2: number): number[] {
-    return _arr.slice(_index1, _index2);
-
+    let aufteilen: number[] = [];
+    for (let i: number = _index1; i < _index2 + 1; i++) {  /* +1 damit es das zweite index mitnimmt, damit es bei 4 aufhört */
+        aufteilen.push(_arr[i]); 
+    }
+    return aufteilen;
 }
-console.log(split(arr, index1, index2));
+console.log(split(arr1, index1, index2));
 
 // Aufgabe 3
 let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById("myFirstCanvas");

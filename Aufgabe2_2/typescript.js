@@ -1,7 +1,8 @@
 "use strict";
 // Aufagbe 1
 // a
-function min(_emptyArray) {
+// ...empty ist ein Resteparameter
+function min(..._emptyArray) {
     let minimum = _emptyArray[0];
     for (let i = 0; i < _emptyArray.length; i++) {
         if (minimum > _emptyArray[i]) {
@@ -10,7 +11,6 @@ function min(_emptyArray) {
     }
     return minimum;
 }
-console.log(min([5, 42, 17, 2018, -10, 60, -10010]));
 //  b
 let xb = 5;
 function isEven(_x3) {
@@ -50,7 +50,7 @@ showInfo(studentArray[3]);
 // Aufgabe 2
 // a Übergabeparameter verwenden
 // Arrayliste namens input
-let arr = [5, 42, 17, 2018, -10, 60, -10010];
+let arr1 = [5, 42, 17, 2018, -10, 60, -10010];
 function backwards(_input) {
     let arr = new Array;
     for (let i = _input.length - 1; i >= 0; i--) {
@@ -58,13 +58,19 @@ function backwards(_input) {
     }
     return arr;
 }
-console.log(backwards(arr));
+console.log(backwards(arr1));
 // b
 let gerade = [12, 14, 16, 18];
 let ungerade = [11, 23, 35, 47];
 function join(_array1, _array2) {
-    let zahlenZusammen = _array1.concat(_array2);
-    console.log(zahlenZusammen);
+    let zahlenZusammen = [];
+    for (let i = 0; i < _array1.length; i++) { /* */
+        zahlenZusammen.push(_array1[i]); /* erstes array in zahlenzusammen  hinzufügen*/
+    }
+    for (let i = 0; i < _array2.length; i++) { /* */
+        zahlenZusammen.push(_array2[i]); /* zweites array in zahlenzusammen  hinzufügen*/
+    }
+    return zahlenZusammen;
 }
 join(gerade, ungerade);
 // c
@@ -72,9 +78,13 @@ join(gerade, ungerade);
 let index1 = 0;
 let index2 = 4;
 function split(_arr, _index1, _index2) {
-    return _arr.slice(_index1, _index2);
+    let aufteilen = [];
+    for (let i = _index1; i < _index2 + 1; i++) { /* +1 damit es das zweite index mitnimmt, damit es bei 4 aufhört */
+        aufteilen.push(_arr[i]);
+    }
+    return aufteilen;
 }
-console.log(split(arr, index1, index2));
+console.log(split(arr1, index1, index2));
 // Aufgabe 3
 let canvas = document.getElementById("myFirstCanvas");
 let context = canvas.getContext("2d");
