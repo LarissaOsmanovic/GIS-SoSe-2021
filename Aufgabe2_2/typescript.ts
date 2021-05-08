@@ -1,6 +1,6 @@
 // Aufagbe 1
 // a
-// ...empty ist ein Resteparameter, alles was man anlegt wird da reingepackt
+// ...empty ist ein Resteparameter, alles was man anlegt wird da reingepackt, viele beliebige Parameter hinzufügen
 function min(..._emptyArray: number[]): number {
     let minimum: number = _emptyArray[0];
     for (let i: number = 0; i < _emptyArray.length; i++) {

@@ -1,7 +1,7 @@
 "use strict";
 // Aufagbe 1
 // a
-// ...empty ist ein Resteparameter, alles was man anlegt wird da reingepackt
+// ...empty ist ein Resteparameter, alles was man anlegt wird da reingepackt, viele beliebige Parameter hinzufügen
 function min(..._emptyArray) {
     let minimum = _emptyArray[0];
     for (let i = 0; i < _emptyArray.length; i++) {

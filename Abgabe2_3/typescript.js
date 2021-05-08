@@ -5,7 +5,10 @@ var Abgabe2_3;
     // Alt + Pfeil klammer zu verschieben
     // 'Alt shift und pfeil taste kopieren'
     // strg shift pfeil sachen zu markieren
-    // Strg alt mehrere corsair
+    // Strg alt pfeil = mehrere corsair
+    // strg enter neue zeile
+    // data.set 
+    // asso array bestimmen den schlüsselwort selber
     function rechteck() {
         let div = document.createElement("div"); /* Element erstellen. Vom Datentyp htmldivelement */
         document.body.appendChild(div); /* Eltern - Kindbeziehung */
@@ -13,6 +16,11 @@ var Abgabe2_3;
         div.style.width = (Math.random() * 250).toString() + "px";
         div.style.position = "absolute"; //Ändern muss random sein
         div.style.backgroundColor = "#85ccf2";
+        div.style.position = "relative";
+        div.style.marginLeft = (Math.random() * 50).toString() + "px";
+        div.style.marginTop = (Math.random() * 50).toString() + "px";
+        div.style.marginRight = (Math.random() * 50).toString() + "px";
+        div.style.marginBottom = (Math.random() * 50).toString() + "px";
     }
     for (let i = 0; i < 0; i++) {
         rechteck();
@@ -22,19 +30,5 @@ var Abgabe2_3;
     }
     document.querySelector("#neuladen").addEventListener("click", handleLoad);
     document.querySelector("#hinzufügen").addEventListener("click", rechteck);
-    // interface Seite {
-    //     farbe: string;
-    //     name: string;
-    //     preis: number;
-    // }
-    // class Seite {
-    //     name: string;
-    //     farbe: string;
-    //     preis: number;
-    //     constructor(_name: string,_farbe: string,  _preis: number) {
-    //         this.name = _name;
-    //         this.farbe = _farbe;
-    //         this.preis = _preis;
-    //     }
 })(Abgabe2_3 || (Abgabe2_3 = {}));
 //# sourceMappingURL=typescript.js.map
