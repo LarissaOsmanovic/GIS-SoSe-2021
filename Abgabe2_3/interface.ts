@@ -1,10 +1,6 @@
 namespace Abgabe2_3 {
     // Keine Funktionaltiät#
-    // export interface Pizza {
-    //     durchmesser: number;
-    //     toppings: string;
-    //     service: string;
-    // }
+ 
 
     export interface Größe {
         durchmesser: number;

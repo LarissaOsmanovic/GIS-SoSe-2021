@@ -3,23 +3,6 @@ var Abgabe2_3;
 (function (Abgabe2_3) {
     // Aufgabe 2
     // aus dem data.ts script 
-    function chooseSize() {
-        let imageSmall = document.createElement("img");
-        imageSmall.src = Abgabe2_3.größen[0].image;
-        document.querySelector("#small").addEventListener("click", chooseSize);
-        let imageMedium = document.createElement("img");
-        imageMedium.src = Abgabe2_3.größen[1].image;
-        document.querySelector("#medium").addEventListener("click", chooseSize);
-        let imageLarge = document.createElement("img");
-        imageLarge.src = Abgabe2_3.größen[2].image;
-        document.querySelector("#large").addEventListener("click", chooseSize);
-    }
-    console.log(Abgabe2_3.größen[0]);
-    console.log(Abgabe2_3.größen[1]);
-    console.log(Abgabe2_3.größen[2]);
-    for (let i = 0; i < Abgabe2_3.größen.length; i++) {
-        chooseSize();
-    }
     //Aufgabe 3
     //b)
     function generateSizeElement(_größe) {

@@ -1,36 +1,62 @@
+header { /* Kopfbereich */
+    background-color:burlywood;
+    height: flex;    
+    position: sticky; /* wenn fixed verschwindet es unter dem banner */
+    top: 0;
+    right: 0;
+    left: 0;
+    /* opacity: 0.94; */
+}
+
+/* Navigation im Kopfbereich */
+header nav { 
+    padding-top: 50px;
+    text-align: right;  
+}
+
+header ul {
+    list-style-type: none;
+    overflow: hidden;
+    text-align: right;
+}
+
+header li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: none;
+    color: rgba(133, 63, 42, 0.993);
+}
+
 body{
     background-color: cornsilk;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 main {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: auto;
-    text-align: center;
+    text-align: left;
 }
 
 h1 {
     color: brown;
-    
+  
 }
+
 
 footer {
-    margin: auto;
+    /* margin: auto; */
     text-align: left;
-}
-img[alt=kleinpizza] {
-    margin: auto;
-    width: 10%;
-    display: inline-flex;
-
-}
-img[alt=mittlerepizza] {
-    margin: auto;
-    width: 20%;
-    display: inline-flex;
-
-}
-img[alt=großepizza] {
-    margin: auto;
-    width: 25%;
-    display: inline-flex;
-
+    /* bottom: -900px; */
+    position: relative;
+    
 }

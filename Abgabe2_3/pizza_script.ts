@@ -1,30 +1,8 @@
 namespace Abgabe2_3 {
   // Aufgabe 2
   // aus dem data.ts script 
-  function chooseSize(): void {
-    let imageSmall: HTMLImageElement = document.createElement("img");
-    imageSmall.src = größen[0].image;
-    document.querySelector("#small").addEventListener("click", chooseSize);
-
-    let imageMedium: HTMLImageElement = document.createElement("img");
-    imageMedium.src = größen[1].image;
-    document.querySelector("#medium").addEventListener("click", chooseSize);
-
-    let imageLarge: HTMLImageElement = document.createElement("img");
-    imageLarge.src = größen[2].image;
-    document.querySelector("#large").addEventListener("click", chooseSize);
-
-  }
-  console.log(größen[0]);
-  console.log(größen[1]);
-  console.log(größen[2]);
-
-
-  for (let i: number = 0; i < größen.length; i++) {
-    chooseSize();
-  }
+  
   //Aufgabe 3
-
   //b)
   function generateSizeElement(_größe: Größe): HTMLElement {
     let div: HTMLDivElement = document.createElement("div");
