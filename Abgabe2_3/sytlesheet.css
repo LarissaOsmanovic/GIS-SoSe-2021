@@ -52,8 +52,13 @@ h1 {
   
 }
 
+b{
+    color: brown;
+}
 
 footer {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
     /* margin: auto; */
     text-align: left;
     /* bottom: -900px; */
