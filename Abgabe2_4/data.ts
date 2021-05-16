@@ -1,56 +1,52 @@
-// namespace Abgabe2_4 {
-//         /*JSON - um Daten speichern und austauschen zu können  */
-
-//     /* Das Objekt wird eine JSON String umgewandelt */
-// export let partsJSON: string =
-//   `
-//   {
-//     "Groesse": [
-//      {
-//       "durchmesser": "20", 
-//       "image": "pizza_groesse.png"
-//      },
-//      {
-//       "durchmesser": "25", 
-//       "image": "pizza_groesse.png"
-//      },
-//      {
-//       "durchmesser": "30", 
-//       "image": "pizza_groesse.png"
-//      }
-//      "Toppings"[
-//      {
-//       "toppings": "salami", 
-//       "image": "bild.jpeg"
-//       }
-//       {
-//         "toppings": "mais", 
-//         "image": "bild.jpeg"
-//       },
-//       {
-//         "toppings": "champignions", 
-//           "image": "bild.jpeg"
-//       }
-//    ],
-//     "Bestelloptionen": [
-//     {
-//       "service": "Lieferung", 
-//       "image": "bild.jpeg"
-//     },
-//     {
-//       "service": "Abholung",
-//       "image": "bild.jpeg"
-//     },
-//       {
-//         "service": "Vorort",
-//         "image": "bild.jpeg"
-//       }
-//     ]
-//   }
-// //    `;
-// // export let myJSON: string = JSON.stringify(alleTeile);
-// export let myObj: Pizza = JSON.parse(partsJSON);
-
-// }
-
-   
+namespace Abgabe2_4 {
+    
+    export let myJSON: string = `
+        {
+        "groesse":[
+           {
+              "option":"Small",
+              "image":"pizza_groesse.png"
+           },
+           {
+              "option":"Medium",
+              "image":"pizza_groesse.png"
+           },
+           {
+              "option":"Large",
+              "image":"pizza_groesse.png"
+           }
+        ],
+        "toppings":[
+           {
+              "option":"Salami",
+              "image":"salami.jpg"
+           },
+           {
+              "option":"Mais",
+              "image":"mais.jpg"
+           },
+           {
+              "option":"Champignons",
+              "image":"champions.jpg"
+           }
+        ],
+        "service":[
+           {
+              "option":"Lieferung",
+              "image":"lieferung.png"
+           },
+           {
+              "option":"Abholung",
+              "image":"abholung.png"
+           },
+           {
+              "option":"Vorort",
+              "image":"vorort.png"
+           }
+        ]
+     }`;
+   //  Console.log das gestrin.. JSON kann ichmit element untersuche, console das gaze in einen JSON Formatter reinwerfen
+    console.log(myJSON);
+    
+    export let myObj: Pizza = JSON.parse(myJSON);
+}

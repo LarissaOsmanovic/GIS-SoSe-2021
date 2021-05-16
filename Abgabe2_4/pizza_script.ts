@@ -6,80 +6,120 @@ namespace Abgabe2_4 {
         let div: HTMLDivElement = document.createElement("div");
         let image: HTMLImageElement = document.createElement("img");
         image.src = _teil.image;
+        image.style.height = " 100 px";
+        image.style.width = " 200 px";
         div.appendChild(image);
         let button: HTMLButtonElement = document.createElement("button");
-        button.addEventListener("click", showDurchmesser);
-        button.dataset.option = myObj.groesse.toString();
-        button.innerText = "option: " + _teil.option;
+        let buttonText: Text = document.createTextNode(_teil.option);
+        button.appendChild(buttonText);
+        button.addEventListener("click", storage);
+        button.dataset.option = _teil.option;
+        button.dataset.image = _teil.image;
+      
         div.appendChild(button);
-        // button.onclick
-
         return div;
     }
 
-    function whichSite(): void {
-
-        if (myObj.groesse) {
-            window.open("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_4/groesse");
-        }
-       else if (myObj.toppings) {
-            window.open("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_4/toppings");
-        }
-       else if (myObj.service) {
-            window.open("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_4/service");
-        }
-        // else if (bestelluebersicht) {
-        //     window.open("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_4/bestelluebersicht");
-        // }    
-    }
-    whichSite();
-
-    function ladenImages(): void {
-        // image = typeof message !== 'undefined' ? image : '?';
-        // localStorage.setItem("image",  "default.png");
-
-        let image: string = localStorage.getItem("pizza_groesse.png");
-
-   
-    // local storages laden
-    // default mit fragezeichen
-    }
-
-    function auswahlSpeichern(): void {
-
-    }
-    // schreiben damit es die auswahl speichert mit url
-    for (let i: number = 0; i < myObj.groesse.length; i++) {
-        let x: HTMLElement = generatePizzateil(myObj.groesse[i]);
-
-        document.getElementById("anhängen").appendChild(x);
-    }
-    localStorage.setItem("image", "pizza_groesse.png");
-
-
-    // for (let i: number = 0; i < myObj.toppings.length; i++) {
-    //     let y: HTMLElement = generatePizzateil(myObj.toppings[i]);
-    //     document.getElementById("anhängen").appendChild(y);
-    // }
-    // localStorage.setItem("image", ".png");
-
-    // for (let i: number = 0; i < myObj.service.length; i++) {
-    //     let x: HTMLElement = generatePizzateil(myObj.service[i]);
-
-    //     document.getElementById("anhängen").appendChild(x);
-    // }
-    // localStorage.setItem("image", ".png");
-
-    function showDurchmesser(_event: MouseEvent): void {
-        console.log(_event.target);
-
-        let target: HTMLElement = <HTMLElement>_event.target;
-        console.log(target.dataset.option);
-
+    if (document.querySelector("title").getAttribute("id") == "seite1") {
         for (let i: number = 0; i < myObj.groesse.length; i++) {
-            if (myObj.groesse[i].toString() == target.dataset.option) {
-                console.log(myObj.groesse[i]);
-            }
+            let x: HTMLElement = generatePizzateil(myObj.groesse[i]);
+
+            document.getElementById("anhängen").appendChild(x);
         }
     }
+
+    if (document.querySelector("title").getAttribute("id") == "seite2") {
+        for (let i: number = 0; i < myObj.toppings.length; i++) {
+            let x: HTMLElement = generatePizzateil(myObj.toppings[i]);
+
+            document.getElementById("anhängen2").appendChild(x);
+        }
+    }
+
+    if (document.querySelector("title").getAttribute("id") == "seite3") {
+        for (let i: number = 0; i < myObj.service.length; i++) {
+            let x: HTMLElement = generatePizzateil(myObj.service[i]);
+
+            document.getElementById("anhängen3").appendChild(x);
+        }
+    }
+    // Seite für den Localstorage - die ausgewählte Sache wird gespeichert und aus localstorage gehol
+    function storage(_event: MouseEvent): void {
+
+        if (document.querySelector("title").getAttribute("id") == "seite1") {
+            let target: HTMLElement = <HTMLElement>_event.target;
+            localStorage.setItem("chooseGroesse", target.dataset.option);
+            localStorage.setItem("chooseGroessebild", target.dataset.image);
+        }
+
+        if (document.querySelector("title").getAttribute("id") == "seite2") {
+            let target: HTMLElement = <HTMLElement>_event.target;
+            localStorage.setItem("chooseTopping", target.dataset.option);
+            localStorage.setItem("chooseToppingbild", target.dataset.image);
+        }
+
+        if (document.querySelector("title").getAttribute("id") == "seite3") {
+            let target: HTMLElement = <HTMLElement>_event.target;
+            localStorage.setItem("chooseService", target.dataset.option);
+            localStorage.setItem("chooseServicebild", target.dataset.image);
+        }
+    }
+
+    // Auswahl anzeigen
+    // soll dir auf seite 2 die Auswahl von größe anzeigen
+    if (document.querySelector("title").getAttribute("id") == "seite2") {
+        let div: HTMLDivElement = document.createElement("div");
+        document.body.appendChild(div);
+
+        let chosenBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
+        let text: Text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
+        div.appendChild(chosenBeschreibung);
+        chosenBeschreibung.appendChild(text);
+
+        let saveGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
+        saveGroesse.src = localStorage.getItem("chooseGroessebild"); //bild aufrufen
+        div.appendChild(saveGroesse);
+    }
+    // Seite 3 Größe & Toppings anzeigen
+    if (document.querySelector("title").getAttribute("id") == "seite3") {
+        let div: HTMLDivElement = document.createElement("div");
+        document.body.appendChild(div);
+
+        let chosenBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
+        let text: Text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
+        div.appendChild(chosenBeschreibung);
+        chosenBeschreibung.appendChild(text);
+
+        let saveTopping: HTMLImageElement = document.createElement("img"); //bild anlegen
+        saveTopping.src = localStorage.getItem("chooseToppingbild"); //bild speichern
+        saveTopping.style.height = "20 px";
+        saveTopping.style.width = "50 px";
+        div.appendChild(saveTopping);
+
+        let saveGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
+        saveGroesse.src = localStorage.getItem("chooseGroessebild"); //bild aufrufen
+        div.appendChild(saveGroesse);
+    }
+
+    // Komplette Auswahl anzeigen 
+    if (document.querySelector("title").getAttribute("id") == "seite4") {
+        let div: HTMLDivElement = document.createElement("div");
+        document.body.appendChild(div);
+
+        let saveService: HTMLImageElement = document.createElement("img"); // leeres bild anlegen
+        saveService.src = localStorage.getItem("chooseServicebild"); // ausgewähltes bild speichern
+        div.appendChild(saveService);
+
+
+        let saveTopping: HTMLImageElement = document.createElement("img"); 
+        saveTopping.src = localStorage.getItem("chooseToppingbild"); 
+        div.appendChild(saveTopping);
+
+
+        let saveGroesse: HTMLImageElement = document.createElement("img"); 
+        saveGroesse.src = localStorage.getItem("chooseGroessebild"); 
+        div.appendChild(saveGroesse);
+
+    }
+
 }
