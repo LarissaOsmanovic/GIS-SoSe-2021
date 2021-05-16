@@ -6,8 +6,8 @@ namespace Abgabe2_4 {
         let div: HTMLDivElement = document.createElement("div");
         let image: HTMLImageElement = document.createElement("img");
         image.src = _teil.image;
-        image.style.height = " 100 px";
-        image.style.width = " 200 px";
+        image.style.margin = "50px";
+        image.style.width = "30%";
         div.appendChild(image);
         let button: HTMLButtonElement = document.createElement("button");
         let buttonText: Text = document.createTextNode(_teil.option);
@@ -69,36 +69,62 @@ namespace Abgabe2_4 {
     // soll dir auf seite 2 die Auswahl von größe anzeigen
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div: HTMLDivElement = document.createElement("div");
-        document.body.appendChild(div);
+        document.getElementById("anhängen2").appendChild(div);
 
         let chosenBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
         let text: Text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
+        chosenBeschreibung.style.textAlign = "center";
         div.appendChild(chosenBeschreibung);
         chosenBeschreibung.appendChild(text);
 
         let saveGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
         saveGroesse.src = localStorage.getItem("chooseGroessebild"); //bild aufrufen
+        saveGroesse.style.margin = "20px";
+        saveGroesse.style.width = "30%";
         div.appendChild(saveGroesse);
+
+        let defaultBild: HTMLImageElement = document.createElement("img"); //leeres bild anlegen
+        defaultBild.src = "fragezeichen.png"; //bild aufrufen
+        defaultBild.style.margin = "20px";
+        defaultBild.style.width = "10%";
+        div.appendChild(defaultBild);
+        
+        let defaultBild2: HTMLImageElement = document.createElement("img"); //leeres bild anlegen
+        defaultBild2.src = "fragezeichen.png"; //bild aufrufen
+        defaultBild2.style.margin = "20px";
+        defaultBild2.style.width = "10%";
+        div.appendChild(defaultBild2);
     }
     // Seite 3 Größe & Toppings anzeigen
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div: HTMLDivElement = document.createElement("div");
-        document.body.appendChild(div);
+        document.getElementById("anhängen3").appendChild(div);
 
         let chosenBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
         let text: Text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
+        chosenBeschreibung.style.textAlign = "center";
         div.appendChild(chosenBeschreibung);
         chosenBeschreibung.appendChild(text);
-
+        
+        let saveGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
+        saveGroesse.src = localStorage.getItem("chooseGroessebild"); 
+        saveGroesse.style.margin = "20px";
+        saveGroesse.style.width = "30%";
+        div.appendChild(saveGroesse);
+        
         let saveTopping: HTMLImageElement = document.createElement("img"); //bild anlegen
         saveTopping.src = localStorage.getItem("chooseToppingbild"); //bild speichern
-        saveTopping.style.height = "20 px";
-        saveTopping.style.width = "50 px";
+        saveTopping.style.margin = "20px";
+        saveTopping.style.width = "30%";
         div.appendChild(saveTopping);
 
-        let saveGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
-        saveGroesse.src = localStorage.getItem("chooseGroessebild"); //bild aufrufen
-        div.appendChild(saveGroesse);
+    
+        let defaultBild: HTMLImageElement = document.createElement("img"); //leeres bild anlegen
+        defaultBild.src = "fragezeichen.png"; //bild aufrufen
+        defaultBild.style.margin = "20px";
+        defaultBild.style.width = "10%";
+        div.appendChild(defaultBild);
+       
     }
 
     // Komplette Auswahl anzeigen 
@@ -106,20 +132,27 @@ namespace Abgabe2_4 {
         let div: HTMLDivElement = document.createElement("div");
         document.body.appendChild(div);
 
-        let saveService: HTMLImageElement = document.createElement("img"); // leeres bild anlegen
-        saveService.src = localStorage.getItem("chooseServicebild"); // ausgewähltes bild speichern
-        div.appendChild(saveService);
-
+        let saveGroesse: HTMLImageElement = document.createElement("img"); 
+        saveGroesse.src = localStorage.getItem("chooseGroessebild"); 
+        saveGroesse.style.margin = "15px";
+        saveGroesse.style.width = "30%";
+     
+        div.appendChild(saveGroesse);
 
         let saveTopping: HTMLImageElement = document.createElement("img"); 
         saveTopping.src = localStorage.getItem("chooseToppingbild"); 
+        saveTopping.style.margin = "15px";
+        saveTopping.style.width = "30%";
+       
         div.appendChild(saveTopping);
 
+        let saveService: HTMLImageElement = document.createElement("img"); // leeres bild anlegen
+        saveService.src = localStorage.getItem("chooseServicebild"); // ausgewähltes bild speichern
+        saveService.style.margin = "15px";
+        saveService.style.width = "30%";
+        
+        div.appendChild(saveService);
 
-        let saveGroesse: HTMLImageElement = document.createElement("img"); 
-        saveGroesse.src = localStorage.getItem("chooseGroessebild"); 
-        div.appendChild(saveGroesse);
-
-    }
+    }  
 
 }
