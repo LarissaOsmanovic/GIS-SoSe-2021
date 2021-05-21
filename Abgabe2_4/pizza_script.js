@@ -20,20 +20,20 @@ var Abgabe2_4;
         return div;
     }
     if (document.querySelector("title").getAttribute("id") == "seite1") {
-        for (let i = 0; i < Abgabe2_4.myObj.groesse.length; i++) {
-            let x = generatePizzateil(Abgabe2_4.myObj.groesse[i]);
+        for (let i = 0; i < myObj.groesse.length; i++) {
+            let x = generatePizzateil(myObj.groesse[i]);
             document.getElementById("anhängen").appendChild(x);
         }
     }
     if (document.querySelector("title").getAttribute("id") == "seite2") {
-        for (let i = 0; i < Abgabe2_4.myObj.toppings.length; i++) {
-            let x = generatePizzateil(Abgabe2_4.myObj.toppings[i]);
+        for (let i = 0; i < myObj.toppings.length; i++) {
+            let x = generatePizzateil(myObj.toppings[i]);
             document.getElementById("anhängen2").appendChild(x);
         }
     }
     if (document.querySelector("title").getAttribute("id") == "seite3") {
-        for (let i = 0; i < Abgabe2_4.myObj.service.length; i++) {
-            let x = generatePizzateil(Abgabe2_4.myObj.service[i]);
+        for (let i = 0; i < myObj.service.length; i++) {
+            let x = generatePizzateil(myObj.service[i]);
             document.getElementById("anhängen3").appendChild(x);
         }
     }

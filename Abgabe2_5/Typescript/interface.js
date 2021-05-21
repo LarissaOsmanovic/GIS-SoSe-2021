@@ -19,8 +19,8 @@ var Abgabe2_5;
         ]
     };
     // let myObj: Pizza =  alleTeile;
-    // let myJSON: string = JSON.stringify(alleTeile);
-    // export let myObj: Pizza = JSON.parse(myJSON);
-    // console.log(myJSON);
+    let myJSON = JSON.stringify(Abgabe2_5.alleTeile);
+    Abgabe2_5.myObj = JSON.parse(myJSON);
+    console.log(myJSON);
 })(Abgabe2_5 || (Abgabe2_5 = {}));
 //# sourceMappingURL=interface.js.map

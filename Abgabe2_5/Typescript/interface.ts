@@ -32,7 +32,7 @@ namespace Abgabe2_5 {
 
 
     // let myObj: Pizza =  alleTeile;
-    // let myJSON: string = JSON.stringify(alleTeile);
-    // export let myObj: Pizza = JSON.parse(myJSON);
-    // console.log(myJSON);
+    let myJSON: string = JSON.stringify(alleTeile);
+    export let myObj: Pizza = JSON.parse(myJSON);
+    console.log(myJSON);
 }
