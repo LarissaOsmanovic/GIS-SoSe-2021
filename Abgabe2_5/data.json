@@ -2,15 +2,15 @@
    "groesse": [
       {
          "option":"Small",
-         "image":"groesse.html/Bildgalerie/pizza_groesse.png"
+         "image":"Bildgalerie/pizza_groesse.png"
       },
       {
          "option":"Medium",
-         "image":"/pizza_groesse.png"
+         "image":"Bildgalerie/pizza_groesse.png"
       },
       {
          "option":"Large",
-         "image":"/pizza_groesse.png"
+         "image":"Bildgalerie/pizza_groesse.png"
       }
    ],
    "toppings":[
