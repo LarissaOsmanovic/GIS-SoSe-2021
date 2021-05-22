@@ -3,46 +3,47 @@ var Abgabe2_5;
 (function (Abgabe2_5) {
     async function generatePizza(_url) {
         let response = await fetch(_url); /* */
+        console.log("Response", response);
         let myObj = await response.json();
-        console.log(myObj);
-        if (document.querySelector("title").getAttribute("id") == "site1") {
-            for (let i = 0; i < myObj.groesse.length; i++) {
-                let x = myObj.groesse[i];
-                console.log(x);
+        currentPage(myObj);
+    }
+    generatePizza("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_5/data.json");
+    //auf welcher Seite wir uns befinden und Anzeige der Optionen
+    function currentPage(_part) {
+        if (document.querySelector("title").getAttribute("id") == "seite1") {
+            for (let i = 0; i < _part.groesse.length; i++) {
+                let x = generate(_part.groesse[i]);
+                document.getElementById("anhängen").appendChild(x);
             }
         }
-        if (document.querySelector("title").getAttribute("id") == "site2") {
-            for (let i = 0; i < myObj.toppings.length; i++) {
-                let x = myObj.toppings[i];
-                console.log(x);
+        if (document.querySelector("title").getAttribute("id") == "seite2") {
+            for (let i = 0; i < _part.toppings.length; i++) {
+                let x = generate(_part.toppings[i]);
+                document.getElementById("anhängen2").appendChild(x);
             }
         }
-        if (document.querySelector("title").getAttribute("id") == "site3") {
-            for (let i = 0; i < myObj.service.length; i++) {
-                let x = myObj.service[i];
-                console.log(x);
+        if (document.querySelector("title").getAttribute("id") == "seite3") {
+            for (let i = 0; i < _part.service.length; i++) {
+                let x = generate(_part.service[i]);
+                document.getElementById("anhängen3").appendChild(x);
             }
         }
     }
-    generatePizza("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_5/data.json");
-    function generateButton(_part) {
+    function generate(_part) {
+        let div = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = _part.image;
+        image.style.width = "250px";
+        div.appendChild(image);
         let button = document.createElement("button");
         let buttonText = document.createTextNode(_part.option);
         button.appendChild(buttonText);
-        // button.addEventListener("click", storage);
+        button.addEventListener("click", storage);
         button.dataset.option = _part.option;
         button.dataset.image = _part.image;
-        return button;
+        div.appendChild(button);
+        return div;
     }
-    // communicate("https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits") ;
-    // async function communicate(_url: RequestInfo): Promise<void> {
-    //     let response: Response = await fetch(_url);
-    //     // = await text("");
-    //     console.log("Response", response);
-    // }
-    // console.log("start");
-    // communicate("https://hs-furtwangen.github.io/GIS-SoSe-2021/content/2-chapter/L2.5/test.txt");
-    // console.log("ende");
     // Seite für den Localstorage - die ausgewählte Sache wird gespeichert und aus localstorage gehol
     function storage(_event) {
         if (document.querySelector("title").getAttribute("id") == "seite1") {
@@ -61,49 +62,56 @@ var Abgabe2_5;
             localStorage.setItem("chooseServicebild", target.dataset.image);
         }
     }
-    // c) Fügen Sie der “Display Seite” (die in der alle ausgewählten Dinge gemeinsam am Ende angezeigt werden) 
-    // eine Funktion hinzu, welche die Daten, die im Browsercache gespeichert sind, an die URL https://gis-communication.herokuapp.com 
-    // verschickt und dessen JSON Antwort wohlformatiert auf Ihrer Webseite anzeigt. 
-    // Die Antwort auf die erste Anfrage kann unter Umständen bis zu 15 Sekunden dauern, da der Server erst 
-    // hochfahren muss
-    async function displaySeite(_url) {
-        let query = new URLSearchParams(storage);
-        _url = _url + "?" + query.toString();
-        let response = await fetch(_url);
-        console.log(response);
-    }
-    displaySeite("https://gis-communication.herokuapp.com");
-    // // Get data from the cache.
-    // async function getCachedData(cacheName, url) {
-    //     let cacheStorage = await caches.open(cacheName);
-    //     let cachedResponse = await cacheStorage.match(url);
-    //     // if (!cachedResponse || !cachedResponse.ok) {
-    //     //     return false;
-    //     // }
-    //     return await cachedResponse.json();
-    // }
-    function saveAndShow(_url) {
-        let promise = fetch(_url);
-        // establish the functions to call when communications 1. succeeds, 2. fails
-        promise.then(handleSuccess, handleFailure);
-    }
-    // saveAndShow("https://larissaosmanovic.github.io/GIS-SoSe-2021/Abgabe2_5/bestelluebersicht.html");
-    function handleFailure(_response) {
+    // Auswahl anzeigen
+    // soll dir auf seite 2 die Auswahl von größe anzeigen
+    if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div = document.createElement("div");
-        document.body.appendChild(div);
-        let p = document.createElement("p");
-        let textP = document.createTextNode("Ihre Bestellung ist fehlgeschlagen. Versuchen Sie es erneut.");
-        p.style.color = "red";
-        div.appendChild(p);
-        p.appendChild(textP);
+        document.getElementById("anhängen2").appendChild(div);
+        let chosenBeschreibung = document.createElement("p"); // p-Element anlegen
+        let text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
+        chosenBeschreibung.style.textAlign = "center";
+        div.appendChild(chosenBeschreibung);
+        chosenBeschreibung.appendChild(text);
+        let saveGroesse = document.createElement("img"); //bild anlegen
+        saveGroesse.src = localStorage.getItem("chooseGroessebild"); //bild aufrufen
+        saveGroesse.style.margin = "20px";
+        saveGroesse.style.width = "30%";
+        div.appendChild(saveGroesse);
+        let defaultBild = document.createElement("img"); //leeres bild anlegen
+        defaultBild.src = "Bildgalerie/fragezeichen.png"; //bild aufrufen
+        defaultBild.style.margin = "20px";
+        defaultBild.style.width = "10%";
+        div.appendChild(defaultBild);
+        let defaultBild2 = document.createElement("img"); //leeres bild anlegen
+        defaultBild2.src = "Bildgalerie/fragezeichen.png"; //bild aufrufen
+        defaultBild2.style.margin = "20px";
+        defaultBild2.style.width = "10%";
+        div.appendChild(defaultBild2);
     }
-    function handleSuccess(_response) {
+    // Seite 3 Größe & Toppings anzeigen
+    if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div = document.createElement("div");
-        document.body.appendChild(div);
-        let pSuccess = document.createElement("p");
-        let textSuccess = document.createTextNode("Ihre Bestellung ist eingegangen.Beehren Sie uns bald wieder!!");
-        div.appendChild(pSuccess);
-        pSuccess.appendChild(textSuccess);
+        document.getElementById("anhängen3").appendChild(div);
+        let chosenBeschreibung = document.createElement("p"); // p-Element anlegen
+        let text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
+        chosenBeschreibung.style.textAlign = "center";
+        div.appendChild(chosenBeschreibung);
+        chosenBeschreibung.appendChild(text);
+        let saveGroesse = document.createElement("img"); //bild anlegen
+        saveGroesse.src = localStorage.getItem("chooseGroessebild");
+        saveGroesse.style.margin = "20px";
+        saveGroesse.style.width = "30%";
+        div.appendChild(saveGroesse);
+        let saveTopping = document.createElement("img"); //bild anlegen
+        saveTopping.src = localStorage.getItem("chooseToppingbild"); //bild speichern
+        saveTopping.style.margin = "20px";
+        saveTopping.style.width = "30%";
+        div.appendChild(saveTopping);
+        let defaultBild = document.createElement("img"); //leeres bild anlegen
+        defaultBild.src = "Bildgalerie/fragezeichen.png"; /*relativer Pfad  */
+        defaultBild.style.margin = "20px";
+        defaultBild.style.width = "10%";
+        div.appendChild(defaultBild);
     }
     // Komplette Auswahl anzeigen 
     if (document.querySelector("title").getAttribute("id") == "seite4") {
@@ -125,5 +133,25 @@ var Abgabe2_5;
         saveService.style.width = "30%";
         div.appendChild(saveService);
     }
+    // c
+    async function sendData(_url) {
+        let query = new URLSearchParams(localStorage);
+        console.log(query.toString());
+        _url = _url + "?" + query.toString();
+        let response = await fetch(_url);
+        let result = await response.json();
+        let display = document.getElementById("serverResponse");
+        if (result.error) {
+            display.className = "Error";
+            display.innerText = result.error;
+            display.style.color = "red";
+        }
+        else {
+            display.className = "Message";
+            display.innerText = result.message;
+            display.style.color = "red";
+        }
+    }
+    sendData("https://gis-communication.herokuapp.com");
 })(Abgabe2_5 || (Abgabe2_5 = {}));
 //# sourceMappingURL=pizza_script.js.map
