@@ -66,7 +66,7 @@ var Abgabe2_5;
     // soll dir auf seite 2 die Auswahl von größe anzeigen
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div = document.createElement("div");
-        document.getElementById("anhängen2").appendChild(div);
+        document.getElementById("anzeigen2").appendChild(div);
         let chosenBeschreibung = document.createElement("p"); // p-Element anlegen
         let text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
         chosenBeschreibung.style.textAlign = "center";
@@ -91,7 +91,7 @@ var Abgabe2_5;
     // Seite 3 Größe & Toppings anzeigen
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div = document.createElement("div");
-        document.getElementById("anhängen3").appendChild(div);
+        document.getElementById("anzeigen3").appendChild(div);
         let chosenBeschreibung = document.createElement("p"); // p-Element anlegen
         let text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
         chosenBeschreibung.style.textAlign = "center";

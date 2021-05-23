@@ -82,7 +82,7 @@ namespace Abgabe2_5 {
     // soll dir auf seite 2 die Auswahl von größe anzeigen
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div: HTMLDivElement = document.createElement("div");
-        document.getElementById("anhängen2").appendChild(div);
+        document.getElementById("anzeigen2").appendChild(div);
 
         let chosenBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
         let text: Text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
@@ -111,7 +111,7 @@ namespace Abgabe2_5 {
     // Seite 3 Größe & Toppings anzeigen
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div: HTMLDivElement = document.createElement("div");
-        document.getElementById("anhängen3").appendChild(div);
+        document.getElementById("anzeigen3").appendChild(div);
 
         let chosenBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
         let text: Text = document.createTextNode("Deine bisherige Auswahl:"); // p-Element befüllen
@@ -186,5 +186,7 @@ namespace Abgabe2_5 {
             display.style.color = "red";
         }
     }
+
     sendData("https://gis-communication.herokuapp.com");
+
 }
