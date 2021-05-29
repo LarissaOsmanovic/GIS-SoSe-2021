@@ -54,7 +54,6 @@ namespace Abgabe2_5 {
         div.appendChild(button);
 
         return div;
-
     }
 
     // Seite für den Localstorage - die ausgewählte Sache wird gespeichert und aus localstorage gehol
@@ -167,10 +166,9 @@ namespace Abgabe2_5 {
     }
 
     // c
-    async function sendData(_url: RequestInfo): Promise<void> {
+    async function sendAndShow(_url: RequestInfo): Promise<void> {
         let query: URLSearchParams = new URLSearchParams(localStorage);
         console.log(query.toString());
-
         _url = _url + "?" + query.toString();
         let response: Response = await fetch(_url);
         let result: ServerAnswer = await response.json();
@@ -183,10 +181,8 @@ namespace Abgabe2_5 {
         else {
             display.className = "Message";
             display.innerText = result.message;
-            display.style.color = "red";
+            display.style.color = "blue";
         }
     }
-
-    sendData("https://gis-communication.herokuapp.com");
-
+    sendAndShow("https://gis-communication.herokuapp.com");
 }

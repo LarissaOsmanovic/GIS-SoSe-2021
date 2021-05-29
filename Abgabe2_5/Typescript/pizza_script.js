@@ -134,7 +134,7 @@ var Abgabe2_5;
         div.appendChild(saveService);
     }
     // c
-    async function sendData(_url) {
+    async function sendAndShow(_url) {
         let query = new URLSearchParams(localStorage);
         console.log(query.toString());
         _url = _url + "?" + query.toString();
@@ -149,9 +149,9 @@ var Abgabe2_5;
         else {
             display.className = "Message";
             display.innerText = result.message;
-            display.style.color = "red";
+            display.style.color = "blue";
         }
     }
-    sendData("https://gis-communication.herokuapp.com");
+    sendAndShow("https://gis-communication.herokuapp.com");
 })(Abgabe2_5 || (Abgabe2_5 = {}));
 //# sourceMappingURL=pizza_script.js.map
