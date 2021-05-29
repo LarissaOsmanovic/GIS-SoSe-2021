@@ -10,6 +10,6 @@ namespace Abgabe3_1 {
         console.log(data.get("email"));
 
     }
-    Data("https://gis-example.herokuapp.com/"); //Link App und Github
+    Data("https://scarrylarry.herokuapp.com"); //Link App und Github
 
 }
