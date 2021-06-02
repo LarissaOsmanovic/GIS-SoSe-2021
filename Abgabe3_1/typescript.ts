@@ -18,8 +18,6 @@ namespace Abgabe3_1 {
         let show: string =  await response.text();
         display.innerText = show;
     }
-
-    sendDataServer(); //Link App und Github
-    let button: HTMLButtonElement = document.createElement("button");
+    let button: HTMLButtonElement = <HTMLButtonElement> document.getElementById("button");
     button.addEventListener("click", sendDataServer);
 }

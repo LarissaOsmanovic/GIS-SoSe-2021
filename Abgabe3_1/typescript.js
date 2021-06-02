@@ -19,8 +19,7 @@ var Abgabe3_1;
         let show = await response.text();
         display.innerText = show;
     }
-    sendDataServer(); //Link App und Github
-    let button = document.createElement("button");
+    let button = document.getElementById("button");
     button.addEventListener("click", sendDataServer);
 })(Abgabe3_1 || (Abgabe3_1 = {}));
 //# sourceMappingURL=typescript.js.map
