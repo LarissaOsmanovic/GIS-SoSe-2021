@@ -4,12 +4,14 @@ var Abgabe3_1;
     // name- und value-Attribute als Schlüssel-Werte-Paare zur Verfügung gestellt.
     async function sendDataServer() {
         let data = new FormData(document.forms[0]);
+        console.log(":" + data.get("name"));
         for (let entry of data) {
             console.log(entry);
             console.log("name: " + entry[0]);
             console.log("value: " + entry[1]);
         }
         let url = "https://scarrylarry.herokuapp.com";
+        // tslint:disable-next-line: no-any
         let query = new URLSearchParams(data);
         url = url + "?" + query.toString();
         let response = await fetch(url);

@@ -9,8 +9,8 @@ var Abgabe3_1;
     if (!port)
         port = 8100; /* Browser lokal testen*/
     let server = Http.createServer(); /* Erstellen einen neuen Server*/
-    server.addListener("request", handleRequest); /* Anfrage zur der Function handleRequest (Aufruf) */
-    server.addListener("listening", handleListen); /* Antwort von der Function handleRequest (hört zu) */
+    server.addListener("request", handleRequest); /*So bald eine Anfrage kommt ruft er die handlerRequest auf*/
+    server.addListener("listening", handleListen); /* So bald eine Antwort kommt ruft er die handleRequest auf (hört zu) */
     server.listen(port); /* kümmert sich um die Anfragen */
     function handleListen() {
         console.log("Listening"); /*In der Konsole listening ausgeben, wird nochmal in Zeile 11 aufgerufen*/
