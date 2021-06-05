@@ -1,0 +1,33 @@
+main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formTitel{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    text-align: left;
+    font-size: xx-large;
+}
+.formstyle{
+    font-size: large;
+    text-align: left;
+    border: 0px;
+    color: black;
+    background-color: #CCCCCC;
+    padding-right: 350px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    margin-top: 0px;
+    padding-right: 150px;
+    height: 25px;
+    width: 350px;
+}
+
+.formbutton{
+    height: 30px;
+    width: 100px;
+    border: 0px;
+    background-color: rgba(88, 127, 145, 0.762);
+    color: white;
+    } 

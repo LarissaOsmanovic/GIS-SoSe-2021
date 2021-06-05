@@ -17,32 +17,20 @@ var Abgabe3_2;
         console.log("Listening"); /*In der Konsole listening ausgeben, wird nochmal in Zeile 11 aufgerufen*/
     }
     function handleRequest(_request, _response) {
-        console.log("I hear voices!");
-        _response.setHeader("content-type", "text/html; charset=utf-8"); /*wie in html sind dort meta daten drinne, die antwort die wir bekommen ist vom Typ "text.html"; utf-8 Cordierung */
-        _response.setHeader("Access-Control-Allow-Origin", "*"); /*wer alles die Antwort rmpfangen darf. "*" -> jeder und überall darf zu greifen auf die Seite */
-        _response.write(_request.url); /* Methode write () schreibt HTML-Ausdrücke oder JavaScript-Code in ein Dokument*/
-        _response.end(); /* bewegt den internen Zeiger auf das letzte Element im Array und gibt es aus.*/
-        if (_request.url) {
-            let url = Url.parse(_request.url, true);
-            for (let key in url.query) {
-                _response.write(key + ":" + url.query[key]);
+        _response.setHeader("content-type", "text/html; charset=utf-8");
+        _response.setHeader("Access-Control-Allow-Origin", "*");
+        let _url = Url.parse(_request.url, true);
+        if (_url.pathname == "/html") {
+            for (let key in _url.query) {
+                _response.write(key + ":" + _url.query[key] + ", " + " ");
             }
-            let jsonString = JSON.stringify(url.query);
+        }
+        if (_url.pathname == "/json") {
+            let jsonString = JSON.stringify(_url.query);
+            console.log(_url.query);
             _response.write(jsonString);
         }
+        _response.end();
     }
-    //Diesen Code innerhalb von einem aktiven Server testen:
-    // let adresse: string = 'http://localhost:8080/default.htm?jahr=2017&monat=february';
-    // //Adresse parsen (umwandeln):
-    // let q = url.parse(adresse, true);
-    // /*Die parse Methode gibt ein Objekt zurück, dass die URL Eigenschaften enthält. 
-    // So können die fest definierten Eigenschaften einer URL ausgelesen werden:*/
-    // console.log(q.host);
-    // console.log(q.pathname);
-    // console.log(q.search);
-    // /*Die query Eigenschaft gibt ein Ojekt zurück, dass alle query-string Parameter als Eigenschaften besitzt. 
-    // So können beliebig gesendete Attribute ausgelesen werden:*/
-    // var qdata = q.query;
-    // console.log(qdata.monat)
 })(Abgabe3_2 = exports.Abgabe3_2 || (exports.Abgabe3_2 = {}));
 //# sourceMappingURL=server.js.map
