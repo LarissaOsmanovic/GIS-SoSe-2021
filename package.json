@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Hallöchen Popöchen!!",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/mongodb": "^3.6.18",
+    "mongodb": "^3.6.9",
+    "node": "^16.3.0"
+  },
   "devDependencies": {},
   "scripts": {
-    "start": "node Abgabe3_2/server.js"
+    "start": "node Abgabe3_4/server.js"
   },
   "repository": {
     "type": "git",
