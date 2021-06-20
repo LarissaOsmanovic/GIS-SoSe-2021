@@ -17,7 +17,7 @@ var Abgabe3_4;
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
-    let databankURL = "http://mongodbnetbrowser.herokuapp.com/?u=larissa_morena&p=012345!&a=clusterscarrylarry.sqvhn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority ";
+    let databankURL = "mongodb+srv://larissa_morena:012345!@clusterscarrylarry.sqvhn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
     function startServer(_port) {
         let server = Http.createServer();
         console.log("Starting Server");

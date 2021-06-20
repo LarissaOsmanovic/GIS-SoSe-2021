@@ -19,7 +19,7 @@ export namespace Abgabe3_4 {
     if (!port)
         port = 8100;
 
-    let databankURL: string = "http://mongodbnetbrowser.herokuapp.com/?u=larissa_morena&p=012345!&a=clusterscarrylarry.sqvhn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority ";
+    let databankURL: string = "mongodb+srv://larissa_morena:012345!@clusterscarrylarry.sqvhn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
     function startServer(_port: string | number): void {
         let server: Http.Server = Http.createServer();
