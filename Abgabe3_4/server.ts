@@ -4,7 +4,6 @@ import * as Mongo from "mongodb";
 
 
 export namespace Abgabe3_4 {
-
     // interface Person {
     //     vorname: string;
     //     nachname: string;
@@ -36,7 +35,7 @@ export namespace Abgabe3_4 {
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
 
-        forms = mongoClient.db("test").collection("personen");
+        forms = mongoClient.db("Test").collection("personen");
         // let remove: Mongo.Collection = mongoClient.db("test").collection("personen");
         // remove.drop();
 

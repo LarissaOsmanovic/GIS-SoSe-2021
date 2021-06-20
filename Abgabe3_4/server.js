@@ -30,7 +30,7 @@ var Abgabe3_4;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        forms = mongoClient.db("test").collection("personen");
+        forms = mongoClient.db("Test").collection("personen");
         // let remove: Mongo.Collection = mongoClient.db("test").collection("personen");
         // remove.drop();
         console.log("Database connection ", forms != undefined);
